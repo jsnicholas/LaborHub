@@ -20,3 +20,7 @@
     -webkit-text-size-adjust: 100%;
     /* 2 */
   }
+
+  body {
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+  }
