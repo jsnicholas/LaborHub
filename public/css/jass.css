@@ -8,19 +8,29 @@
     --mustard: #FBBF30ff;
 }
 
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
- html {
-    line-height: 1.15;
-    /* 1 */
-    -webkit-text-size-adjust: 100%;
-    /* 2 */
+  body {
+    font-family: 'Roboto', Tahoma, Verdana, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
   }
 
-  body {
-    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-  }
+/* NAVBAR */
+.navsection {
+    background-color: var(--darkblue);
+    color: var(--light);
+    height: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: var(--light);
+}
+
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
