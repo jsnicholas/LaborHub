@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    res.render('index');
+    res.render('index', { loggedIn: req.session.loggedIn });
     // const userData = await User.findAll({
     //   attributes: { exclude: ['password'] },
     //   order: [['name', 'ASC']],
@@ -27,5 +27,9 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+router.get('/dashboard', withAuth, (req, res) => {
+  res.send('dashboard')
+})
 
 module.exports = router;
