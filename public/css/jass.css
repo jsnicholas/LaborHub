@@ -1,0 +1,37 @@
+:root {
+    --light: #EBEBEBff;
+    --dark: #0B1329ff;
+    --gray: #929299ff;
+    --darkblue: #183761ff;
+    --lightblue: #2B5381ff;
+    --rust: #A94B2Cff;
+    --mustard: #FBBF30ff;
+}
+
+  body {
+    font-family: 'Roboto', Tahoma, Verdana, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+  }
+
+/* NAVBAR */
+.navsection {
+    background-color: var(--darkblue);
+    color: var(--light);
+    height: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: var(--light);
+}
+
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
