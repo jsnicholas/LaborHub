@@ -1,3 +1,12 @@
-<div>
-    <h2> Sucessfully registered! </h2>
+<div class="form-group">
+  <h2>Sign-Up</h2>
+  <form action="/register" method="POST">
+    <label for="username-signup">Choose a Username:</label>
+    <input class="form-input" type="text" id="username-signup" name="usr_name"/>
+    <label for="email-signup">Enter your Email:</label>
+    <input class="form-input" type="text" id="email-signup" name="email"/>
+    <label for="password-signup">Create a Password:</label>
+    <input class="form-input" type="password" id="password-signup" name="password"/>
+    <button id="submit-register-button" type="submit" class="btn">Sign-Up</button>
+  </form>
 </div>
