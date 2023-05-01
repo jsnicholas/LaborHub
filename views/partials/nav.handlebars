@@ -1,8 +1,25 @@
 <header class="navbar">
-  <section class="navbar-section">
-    <h1 class="btn">LaborHub</h1>
-    <a href="/" class="btn btn-link">HOME</a>
-    <a href="/dashboard" class="btn btn-link">DASHBOARD</a>
-    <a href="/login" class="btn btn-link">LOGIN</a>
-  </section>
+  <nav class="navbar-section">
+    <h1 class="">LaborHub</h1>
+    {{! Mobile view Nav }}
+    <div class="dropdown show-md">
+      <a href="#" class="btn btn-link dropdown-toggle" tabindex="0">
+        {{! Dropdown menu text can go here }}
+        <i class="icon icon-menu"></i>
+      </a>
+      {{! Menu links  }}
+      <ul class="menu">
+        <a href="/" class="btn btn-link">HOME</a>
+        <a href="/dashboard" class="btn btn-link">DASHBOARD</a>
+        <a href="/login" class="btn btn-link">LOGIN</a>
+      </ul>
+    </div>
+
+    {{! Desktop View Nav   }}
+    <div class="hide-md">
+      <a href="/" class="btn btn-link">HOME</a>
+      <a href="/dashboard" class="btn btn-link">DASHBOARD</a>
+      <a href="/login" class="btn btn-link">LOGIN</a>
+    </div>
+  </nav>
 </header>
