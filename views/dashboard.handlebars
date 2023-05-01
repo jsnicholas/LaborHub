@@ -1,0 +1,27 @@
+{{> nav}}
+<main class="dashboard-content columns mx-1">
+{{!-- DASHBOARD CARDS --}}
+{{!-- DUES --}}
+{{!-- {{#if dues}} --}}
+<div class="column col-6 col-xs-12">
+{{> dashboard/dues}}
+{{!-- {{/if}} --}}
+</div>
+
+{{!-- UNION REPRESENTATIVE --}}
+{{!-- {{#if hasRepresentative}} --}}
+<div class="column col-6 col-xs-12">
+{{> dashboard/myrep}}
+</div>
+{{!-- {{/if}} --}}
+
+{{!-- CALENDAR --}}
+<div class="column col-6 col-xs-12">
+{{> dashboard/calendar}}
+</div>
+
+<div class="column col-6 col-xs-12">
+{{> dashboard/messages}}
+</div>
+
+</main> 
