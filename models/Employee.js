@@ -57,6 +57,10 @@ Employee.init(
       type: DataTypes.STRING,
       allowNull: true
     },
+    sexual_orientation: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     hire_date: {
       type: DataTypes.DATE,
       allowNull: false
