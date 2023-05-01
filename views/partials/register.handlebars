@@ -1,10 +1,61 @@
 <div class="form-group">
-  <h2>Register</h2>
-  <form action="/register" method="POST">
-    <label class="form-label" for="input-example-1">Choose a Username:</label>
-    <input class="form-input" type="text" id="input-example-1" />
-    <label class="form-label" for="input-example-1">Choose a Password:</label>
-    <input class="form-input" type="text" id="input-example-1" />
-    <button class="btn">Sign-Up</button>
-  </form>
+    <h2>Register below:</h2>
+    <form action="/register" method="POST">
+        <!--USER INFORMATION-->
+        <h2>Personal Information</h2>
+        <!--first_name-->
+        <label class="form-label form-inline" for="first_name">Enter your LAST Name:</label>
+        <input class="form-input" type="text" id="first_name" name="first_name" />
+        <!--last_name-->
+        <label class="form-label form-inline" for="last_name">Enter your LAST Name:</label>
+        <input class="form-input" type="text" id="last_name" name="last_name" />
+        <!--email-->
+        <label class="form-label form-inline" for="email">Enter your LAST Name:</label>
+        <input class="form-input" type="email" id="email" name="email" placeholder="Type email here..."
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,14}$" />
+        <!--personal phone-->
+        <!--address 1-->
+        <!--address 2-->
+        <!--city-->
+        <!--zip-->
+        <!--gender orientation: allow NULL-->
+        <label class="form-label">Gender Orientation:</label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Non-Binary
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex" checked>
+            <i class="form-icon"></i> Male
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Female
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Prefer not identify
+        </label>
+        <!--ethnicity-->
+
+        <!--hire date-->
+        <!--position-->
+        <!--work phone-->
+        <!--work phone ext-->
+        <!--base rate-->
+        <!--annual salary-->
+
+
+        <!--USERNAME AND PASSWORD-->
+        <h2>Create a username and password:</h2>
+        <!--usr_name-->
+        <label class="form-label form-inline" for="usr_name">Create a Username:</label>
+        <input class="form-input form-inline" type="text" id="usr_name" name="usr_name" />
+        <!--password-->
+        <label class="form-label form-inline" for="password">Create a Password:</label>
+        <input class="form-input" type="password" id="password" name="password" placeholder="..."
+            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" />
+        <!--SUBMIT BUTTON-->
+        <button class="submit btn">Sign-Up</button>
+    </form>
 </div>
