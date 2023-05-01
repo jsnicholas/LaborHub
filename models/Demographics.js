@@ -1,17 +1,17 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Demographics extends Model {}
+class Demographics extends Model { }
 
 Demographics.init(
   {
     gender: {
       type: DataTypes.STRING,
       allowNull: false,
-    
+
     },
     start_date: {
-      type: DataTypes.date,
+      type: DataTypes.DATEONLY,
       allowNull: false,
     },
     position: {
@@ -31,10 +31,10 @@ Demographics.init(
       allowNull: false,
     },
     salary: {
-        type: DataTypes.DECIMAL,
-        allowNull: false,
+      type: DataTypes.DECIMAL,
+      allowNull: false,
     },
-    
+
   },
   {
     sequelize,

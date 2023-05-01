@@ -15,10 +15,9 @@
   }
 
 /* NAVBAR */
-.navsection {
+.navbar-section {
     background-color: var(--darkblue);
     color: var(--light);
-    height: 45%;
     width: 100%;
     display: flex;
     justify-content: space-around;
