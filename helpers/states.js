@@ -1,7 +1,9 @@
-const statesUS = require('../public/json/states_hash.json')
+const statesUS = require('../public/json/states_hash.json');
+const Handlebars = require('express-handlebars');
+//console.log(statesUS);
 
-Handlebars.registerHelper( 'eachState', function ( map, block ) {
-    Object.keys( statesUS ).map(function( prop ) {
-        return block( statesUS[ prop ] );
-    });
-});
+Handlebars.registerHelper('eachState', function (statesUS) { 
+    const statesArr = Object.keys(statesUS)
+    //console.log(statesArr[1])
+    return statesArr;
+})
