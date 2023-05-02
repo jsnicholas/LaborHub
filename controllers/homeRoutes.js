@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
 const bcrypt = require('bcrypt');
+const statesUS = require('../utils/json/states_hash.json')
 
 router.get('/', async (req, res) => {
   try {
@@ -57,12 +58,13 @@ router.post("/register", async (req, res) => {
 });
 
 router.get('/register', (req, res) => {
+  const statesArr = Object.keys(statesUS)
   if (req.session.logged_in) {
     res.redirect('/');
     return;
   }
 
-  res.render('register');
+  res.render('register', {statesArr});
 });
 
 router.get('/dashboard', (req, res) => {
