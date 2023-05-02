@@ -1,7 +1,7 @@
 const User = require('./User');
 const Employee = require('./Employee');
 
-module.exports = { User, Employee, Demographics };
+module.exports = { User, Employee };
 
 // searching by a username can pull and employee's contact and demo info
 User.hasOne(Employee);
