@@ -1,4 +1,4 @@
-const statesUS = require('../public/json/states_hash.json');
+const statesUS = require('./json/states_hash.json');
 const Handlebars = require('express-handlebars');
 //console.log(statesUS);
 
