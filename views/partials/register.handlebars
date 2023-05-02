@@ -14,12 +14,37 @@
         <input class="form-input" type="email" id="email" name="email" placeholder="Type email here..."
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,14}$" />
         <!--personal phone-->
-        <!--address 1-->
-        <!--address 2-->
+        <label class="form-label form-inline" for="personal_phone">Enter your personal phone number:</label>
+        <input class="form-input" type="tel" id="personal_phone" name="personal_phone" />
+        <!--address 1--> <!--address 2-->
+        <label class="form-label form-inline" for="address1">Enter your address:</label>
+        <input class="form-input" type="text" id="address1" name="address1" placeholder="...123 Main St...">
+        <input class="form-input" type="text" id="address2" name="address2" placeholder="...Apt/Unit Number...">
         <!--city-->
+        <label class="form-label form-inline" for="city">Enter your city:</label>
+        <input class="form-input" type="text" id="city" name="city" placeholder="...Atlanta...">
+        <!--state-->
+        <select class="form-select">
+            <option>Choose an option</option>
+ 
+        </select>
         <!--zip-->
+        <label class="form-label form-inline" for="zip">Enter your zip:</label>
+        <input class="form-input" type="text" id="zip" name="zip" />
         <!--gender orientation: allow NULL-->
-        <label class="sex form-label">Gender Identity:</label>
+        <label class="sex form-label ">Gender Identity:</label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Transgender-Female
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Transgender-Male
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Transgender-Non-Binary
+        </label>
         <label class="form-radio">
             <input type="radio" id="sex" name="sex">
             <i class="form-icon"></i> Non-Binary
