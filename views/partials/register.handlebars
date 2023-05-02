@@ -1,12 +1,123 @@
 <div class="form-group">
-  <h2>Sign-Up</h2>
-  <form action="/register" method="POST">
-    <label for="username-signup">Choose a Username:</label>
-    <input class="form-input" type="text" id="username-signup" name="usr_name"/>
-    <label for="email-signup">Enter your Email:</label>
-    <input class="form-input" type="text" id="email-signup" name="email"/>
-    <label for="password-signup">Create a Password:</label>
-    <input class="form-input" type="password" id="password-signup" name="password"/>
-    <button id="submit-register-button" type="submit" class="btn">Sign-Up</button>
-  </form>
+    <h2>Register below:</h2>
+    <form action="/register" method="POST">
+        <!--USER INFORMATION-->
+        <h3>Personal Information</h3>
+        <!--first_name-->
+        <label class="form-label form-inline" for="first_name">Enter your FIRST Name:</label>
+        <input class="form-input" type="text" id="first_name" name="first_name" />
+        <!--last_name-->
+        <label class="form-label form-inline" for="last_name">Enter your LAST Name:</label>
+        <input class="form-input" type="text" id="last_name" name="last_name" />
+        <!--email-->
+        <label class="form-label form-inline" for="email">Enter your email:</label>
+        <input class="form-input" type="email" id="email" name="email" placeholder="Type email here..."
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,14}$" />
+        <!--personal phone-->
+        <label class="form-label form-inline" for="personal_phone">Enter your personal phone number:</label>
+        <input class="form-input" type="tel" id="personal_phone" name="personal_phone" />
+        <!--address 1--> <!--address 2-->
+        <label class="form-label form-inline" for="address1">Enter your address:</label>
+        <input class="form-input" type="text" id="address1" name="address1" placeholder="...123 Main St...">
+        <input class="form-input" type="text" id="address2" name="address2" placeholder="...Apt/Unit Number...">
+        <!--city-->
+        <label class="form-label form-inline" for="city">Enter your city:</label>
+        <input class="form-input" type="text" id="city" name="city" placeholder="...Atlanta...">
+        <!--state-->
+        <select class="form-select">
+            <option>Choose an option</option>
+            {{#eachState states}}
+            <option>{{this}}</option>
+            {{/eachState}}
+ 
+        </select>
+        <!--zip-->
+        <label class="form-label form-inline" for="zip">Enter your zip:</label>
+        <input class="form-input" type="text" id="zip" name="zip" />
+        <!--gender orientation: allow NULL-->
+        <label class="sex form-label ">Gender Identity:</label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Transgender-Female
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Transgender-Male
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Transgender-Non-Binary
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Non-Binary
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex" checked>
+            <i class="form-icon"></i> Male
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Female
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Other
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Prefer not identify
+        </label>
+        <!--ethnicity-->
+        <label class="ethnicity form-label">Ethnicity: Select at least one.</label>
+        <label class="form-checkbox">
+            <input type="checkbox" id="ethnicity" name="ethnicity">
+            <i class="form-icon"></i> Hispanic
+        </label>
+        <label class="form-checkbox">
+            <input type="checkbox" id="ethnicity" name="ethnicity">
+            <i class="form-icon"></i> White
+        </label>
+        <label class="form-checkbox">
+            <input type="checkbox" id="ethnicity" name="ethnicity">
+            <i class="form-icon"></i> Black or African American
+        </label>
+        <label class="form-checkbox">
+            <input type="checkbox" id="ethnicity" name="ethnicity">
+            <i class="form-icon"></i> American Indian and Alaska Native
+        </label>
+        <label class="form-checkbox">
+            <input type="checkbox" id="ethnicity" name="ethnicity">
+            <i class="form-icon"></i> Asian
+        </label>
+        <label class="form-checkbox">
+            <input type="checkbox" id="ethnicity" name="ethnicity">
+            <i class="form-icon"></i> Native Hawaiian and Other Pacific Islander
+        </label>
+        <label class="form-checkbox">
+            <input type="checkbox" id="ethnicity" name="ethnicity">
+            <i class="form-icon"></i> Some Other Race
+        </label>
+    <!--employee information-->
+    <h3>Employee Information</h3>
+        <!--hire date-->
+        <!--position-->
+        <!--work phone-->
+        <!--work phone ext-->
+        <!--base rate-->
+        <!--annual salary-->
+
+
+        <!--USERNAME AND PASSWORD-->
+        <h3>Create a username and password:</h3>
+        <!--usr_name-->
+        <label class="form-label form-inline" for="usr_name">Create a Username:</label>
+        <input class="form-input form-inline" type="text" id="usr_name" name="usr_name" />
+        <!--password-->
+        <label class="form-label form-inline" for="password">Create a Password:</label>
+        <input class="form-input" type="password" id="password" name="password" placeholder="..."
+            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" />
+        <!--SUBMIT BUTTON-->
+        <button class="submit btn">Sign-Up</button>
+    </form>
 </div>
