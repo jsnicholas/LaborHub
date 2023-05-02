@@ -29,13 +29,25 @@
             {{#eachState states}}
             <option>{{this}}</option>
             {{/eachState}}
- 
+
         </select>
         <!--zip-->
         <label class="form-label form-inline" for="zip">Enter your zip:</label>
         <input class="form-input" type="text" id="zip" name="zip" />
         <!--gender orientation: allow NULL-->
         <label class="sex form-label ">Gender Identity:</label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Female
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex" checked>
+            <i class="form-icon"></i> Male
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sex" name="sex">
+            <i class="form-icon"></i> Non-Binary
+        </label>
         <label class="form-radio">
             <input type="radio" id="sex" name="sex">
             <i class="form-icon"></i> Transgender-Female
@@ -49,27 +61,47 @@
             <i class="form-icon"></i> Transgender-Non-Binary
         </label>
         <label class="form-radio">
-            <input type="radio" id="sex" name="sex">
-            <i class="form-icon"></i> Non-Binary
-        </label>
-        <label class="form-radio">
-            <input type="radio" id="sex" name="sex" checked>
-            <i class="form-icon"></i> Male
+        <input type="radio" id="sex" name="sex">
+        <i class="form-icon"></i> Other
         </label>
         <label class="form-radio">
             <input type="radio" id="sex" name="sex">
-            <i class="form-icon"></i> Female
+            <i class="form-icon"></i> Prefer to not identify
+        </label>
+        <!--sexual_orientation-->
+        <label class="ethnicity form-label">Sexual Orientation: Select at least one.</label>
+        <label class="form-radio">
+            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+            <i class="form-icon"></i> Asexual
         </label>
         <label class="form-radio">
-            <input type="radio" id="sex" name="sex">
+            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+            <i class="form-icon"></i> Bisexual
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+            <i class="form-icon"></i> Gay
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+            <i class="form-icon"></i> Heterosexual
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+            <i class="form-icon"></i> Lesbian
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+            <i class="form-icon"></i> Pansexual
+        </label>
+        <label class="form-radio">
+            <input type="radio" id="sexual_orientation" name="sexual_orientation">
             <i class="form-icon"></i> Other
         </label>
         <label class="form-radio">
-            <input type="radio" id="sex" name="sex">
-            <i class="form-icon"></i> Prefer not identify
+            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+            <i class="form-icon"></i> Prefer to not identify
         </label>
-        <!--sexual_orientation-->
-
         <!--ethnicity-->
         <label class="ethnicity form-label">Ethnicity: Select at least one.</label>
         <label class="form-checkbox">
@@ -100,8 +132,8 @@
             <input type="checkbox" id="ethnicity" name="ethnicity">
             <i class="form-icon"></i> Some Other Race
         </label>
-    <!--employee information-->
-    <h3>Employee Information</h3>
+        <!--employee information-->
+        <h3>Employee Information</h3>
         <!--hire date-->
         <label class="form-label form-inline" for="hire_date">Select Date of Hire:</label>
         <input class="form-input" type="date" id="hire_date" name="hire_date" />
@@ -121,7 +153,8 @@
         <label class="form-label form-inline" for="base_rate">Enter your base rate: Ex. "23" for "23/hour"</label>
         <input class="form-input" type="number" id="base_rate" name="base_rate" />
         <!--annual salary-->
-        <label class="form-label form-inline" for="annual_salary">Enter your annual salary: Ex. "40000" for "40000/year"</label>
+        <label class="form-label form-inline" for="annual_salary">Enter your annual salary: Ex. "40000" for
+            "40000/year"</label>
         <input class="form-input" type="number" id="annual_salary" name="annual_salary" />
         <!--USERNAME AND PASSWORD-->
         <h3>Create a Username and Password:</h3>
