@@ -37,10 +37,8 @@
 /* LINKS */
 a {
     text-decoration: none;
-    color: var(--light);
 }
 
 a:hover {
     text-decoration: underline;
-    font-weight: bold;
 }
