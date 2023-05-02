@@ -12,6 +12,7 @@
     font-family: 'Roboto', Tahoma, Verdana, sans-serif;
     background-color: var(--light);
     color: var(--dark);
+    margin: 20px !important;
   }
 
 /* NAVBAR */
