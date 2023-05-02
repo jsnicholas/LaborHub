@@ -24,12 +24,12 @@
         <label class="form-label form-inline" for="city">Enter your city:</label>
         <input class="form-input" type="text" id="city" name="city" placeholder="...Atlanta...">
         <!--state-->
-        <select class="form-select">
+        <label class="form-label form-inline" for="state">Enter your state:</label>
+        <select class="form-select" id="state" name="state">
             <option>Choose an option</option>
-            {{#eachState states}}
-            <option>{{this}}</option>
-            {{/eachState}}
-
+            {{#each statesArr as | state |}}
+            <option>{{state}}</option>
+            {{/each}}
         </select>
         <!--zip-->
         <label class="form-label form-inline" for="zip">Enter your zip:</label>
