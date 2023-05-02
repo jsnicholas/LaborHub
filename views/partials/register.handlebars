@@ -2,7 +2,7 @@
     <h2>Register below:</h2>
     <form action="/register" method="POST">
         <!--USER INFORMATION-->
-        <h2>Personal Information</h2>
+        <h3>Personal Information</h3>
         <!--first_name-->
         <label class="form-label form-inline" for="first_name">Enter your FIRST Name:</label>
         <input class="form-input" type="text" id="first_name" name="first_name" />
@@ -26,6 +26,9 @@
         <!--state-->
         <select class="form-select">
             <option>Choose an option</option>
+            {{#eachState states_hash}}
+            <option>{{@key}} {{this}}</option>
+            {{/eachState}}
  
         </select>
         <!--zip-->
@@ -95,6 +98,8 @@
             <input type="checkbox" id="ethnicity" name="ethnicity">
             <i class="form-icon"></i> Some Other Race
         </label>
+    <!--employee information-->
+    <h3>Employee Information</h3>
         <!--hire date-->
         <!--position-->
         <!--work phone-->
@@ -104,7 +109,7 @@
 
 
         <!--USERNAME AND PASSWORD-->
-        <h2>Create a username and password:</h2>
+        <h3>Create a username and password:</h3>
         <!--usr_name-->
         <label class="form-label form-inline" for="usr_name">Create a Username:</label>
         <input class="form-input form-inline" type="text" id="usr_name" name="usr_name" />
