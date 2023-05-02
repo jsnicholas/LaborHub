@@ -26,8 +26,8 @@
         <!--state-->
         <select class="form-select">
             <option>Choose an option</option>
-            {{#eachState states_hash}}
-            <option>{{@key}} {{this}}</option>
+            {{#eachState states}}
+            <option>{{this}}</option>
             {{/eachState}}
  
         </select>

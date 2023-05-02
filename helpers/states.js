@@ -7,3 +7,5 @@ Handlebars.registerHelper('eachState', function (statesUS) {
     //console.log(statesArr[1])
     return statesArr;
 })
+
+module.exports = states;
