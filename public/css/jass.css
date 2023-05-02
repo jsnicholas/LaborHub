@@ -22,6 +22,16 @@
     display: flex;
     justify-content: space-around;
     align-items: baseline;
+    margin-bottom:2rem;
+}
+
+/* CARDS */
+.card {
+  box-shadow: 0 0.25rem 1rem rgba(48,55,66,.15)
+}
+
+.dashboard-content .column {
+  padding: 0.4rem;
 }
 
 /* LINKS */

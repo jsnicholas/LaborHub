@@ -13,15 +13,15 @@ User.init(
     usr_name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
       primaryKey: true,
     },
-    last_name: {
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    first_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      validate: {
+        len: [8],
+      },
     },
     email: {
       type: DataTypes.STRING,
@@ -29,13 +29,6 @@ User.init(
       unique: true,
       validate: {
         isEmail: true,
-      },
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [8],
       },
     },
   },
@@ -53,5 +46,6 @@ User.init(
     modelName: 'user',
   }
 );
+
 
 module.exports = User;
