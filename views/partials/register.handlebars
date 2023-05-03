@@ -2,20 +2,29 @@
     <h2>Register below:</h2>
     <form action="/register" method="POST">
         <!--USERNAME AND PASSWORD-->
-        <div class="card registercard">
-            <div class="card-header">
-                <div class="card-title h5">Final Step!</div>
-            </div>
-            <div class="card-body">
-                <!--usr_name-->
-                <label class="form-label form-inline" for="usr_name">Create a Username:</label>
-                <input class="form-input form-inline" type="text" id="usr_name" name="usr_name" />
-                <!--password-->
-                <label class="form-label form-inline" for="password">Create a Password:</label>
-                <input class="form-input" type="password" id="password" name="password" placeholder="..."
-                    pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" />
-            </div>
-        </div>
+
+        <div class="card registercard"> <!--CARD START-->
+            <div class="accordion"> <!--ACCORDION START-->
+                <input type="checkbox" id="accordion-1" name="accordion-checkbox" hidden> <!--ACCORDION ARROW START-->
+                <label class="accordion-header" for="accordion-1">
+                    <i class="icon icon-arrow-right mr-1"></i>
+                    <div class="card-header">
+                        <div class="card-title h5">Create Username and Password</div>
+                    </div>
+                </label> <!--ACCORDION ARROW END-->
+                <div class="accordion-body">
+                    <div class="card-body">
+                        <!--usr_name-->
+                        <label class="form-label form-inline" for="usr_name">Username:</label>
+                        <input class="form-input form-inline" type="text" id="usr_name" name="usr_name" />
+                        <!--password-->
+                        <label class="form-label form-inline" for="password">Password:</label>
+                        <input class="form-input" type="password" id="password" name="password"
+                            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" />
+                    </div>
+                </div>
+            </div> <!--CARD END-->
+        </div><!--ACCORDION END-->
 
         <!--PERSONAL INFORMATION-->
         <div class="card registercard">
@@ -195,11 +204,11 @@
                 <input class="form-input" type="number" id="work_phoneext" name="work_phoneext" placeholder="0000" />
                 <!--base rate-->
                 <label class="form-label form-inline" for="base_rate">Enter your base rate: </label>
-                    <p class="exampletext">Example: Write "23" instead of "$23/hour"</p>
+                <p class="exampletext">Example: Write "23" instead of "$23/hour"</p>
                 <input class="form-input" type="number" id="base_rate" name="base_rate" />
                 <!--annual salary-->
                 <label class="form-label form-inline" for="annual_salary">Enter your annual salary: </label>
-                    <p class="exampletext">Example: Write "40000" instead of "$40,000/year"</p>
+                <p class="exampletext">Example: Write "40000" instead of "$40,000/year"</p>
                 <input class="form-input" type="number" id="annual_salary" name="annual_salary" />
             </div>
         </div>
