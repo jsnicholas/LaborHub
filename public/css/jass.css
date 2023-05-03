@@ -48,6 +48,9 @@ a:hover {
 div.registercard{
   margin-bottom: 1rem;
 }
+div.accCard{
+  margin-left: 1rem;
+}
 button.submit {
   margin: 1rem;
   background-color: var(--mustard);
