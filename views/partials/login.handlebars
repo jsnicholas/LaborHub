@@ -1,10 +1,11 @@
+{{> alert}}
 <div class="form-group">
   <h2>Login</h2>
-  <form action="/login" method="POST">
+  <form action="./login" method="POST">
     <label class="form-label" for="input-example-1">Username:</label>
-    <input class="form-input" type="text" id="input-example-1" />
+    <input class="form-input" type="text" id="input-example-1" name="email"/>
     <label class="form-label" for="input-example-1">Password:</label>
-    <input class="form-input" type="text" id="input-example-1" />
+    <input class="form-input" type="text" id="input-example-1" name="password"/>
     <button class="btn" type="submit">Login</button>
   </form>
 </div>
