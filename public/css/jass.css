@@ -24,6 +24,16 @@
     align-items: baseline;
     margin-bottom:2rem;
 }
+.desktop-navigation-list {
+  display: flex;
+  gap: 1rem;
+}
+.desktop-navigation-list span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:0.3rem;
+}
 
 /* CARDS */
 .card {
