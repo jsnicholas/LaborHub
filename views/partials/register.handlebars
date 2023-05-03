@@ -1,19 +1,19 @@
 <div class="form-group">
     <h2>Register below:</h2>
     <form action="/register" method="POST">
-        <!--USERNAME AND PASSWORD-->
 
+        <!--USERNAME AND PASSWORD-->
         <div class="card registercard"> <!--CARD START-->
-            <div class="card-header">
+            <div class="card-header"> <!--CARD HEADER START-->
                 <div class="card-title h5">Create Username and Password</div>
-            </div>
+            </div> <!--CARD HEADER END-->
             <div class="accordion accCard"> <!--ACCORDION START-->
                 <input type="checkbox" id="accordion-1" name="accordion-checkbox" hidden> <!--ACCORDION ARROW START-->
                 <label class="accordion-header" for="accordion-1">
                     <i class="icon icon-arrow-right mr-1"></i>
                 </label> <!--ACCORDION ARROW END-->
-                <div class="accordion-body">
-                    <div class="card-body">
+                <div class="accordion-body"> <!--ACCORDION BODY START-->
+                    <div class="card-body"> <!--CARD BODY START-->
                         <!--usr_name-->
                         <label class="form-label form-inline" for="usr_name">Username:</label>
                         <input class="form-input form-inline" type="text" id="usr_name" name="usr_name" />
@@ -21,52 +21,62 @@
                         <label class="form-label form-inline" for="password">Password:</label>
                         <input class="form-input" type="password" id="password" name="password"
                             pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" />
-                    </div>
-                </div>
-            </div> <!--CARD END-->
-        </div><!--ACCORDION END-->
+                    </div> <!--CARD BODY END-->
+                </div> <!--ACCORDION BODY END-->
+            </div> <!--ACCORDION END-->
+        </div><!--CARD END-->
 
         <!--PERSONAL INFORMATION-->
-        <div class="card registercard">
-            <div class="card-header">
+        <div class="card registercard"> <!--CARD START-->
+            <div class="card-header"> <!--CARD HEADER START-->
                 <div class="card-title h5">Personal Information</div>
-            </div>
-            <div class="card-body">
-                <!--first_name-->
-                <label class="form-label form-inline" for="first_name">Enter your FIRST Name:</label>
-                <input class="form-input" type="text" id="first_name" name="first_name" />
-                <!--last_name-->
-                <label class="form-label form-inline" for="last_name">Enter your LAST Name:</label>
-                <input class="form-input" type="text" id="last_name" name="last_name" />
-                <!--email-->
-                <label class="form-label form-inline" for="email">Enter your email:</label>
-                <input class="form-input" type="email" id="email" name="email" placeholder="Type email here..."
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,14}$" />
-                <!--personal phone-->
-                <label class="form-label form-inline" for="personal_phone">Enter your personal phone number:</label>
-                <input class="form-input" type="tel" id="personal_phone" name="personal_phone" />
-                <!--address 1--> <!--address 2-->
-                <label class="form-label form-inline" for="address1">Enter your address:</label>
-                <input class="form-input" type="text" id="address1" name="address1" placeholder="123 Main St...">
-                <input class="form-input" type="text" id="address2" name="address2"
-                    placeholder="Apt/Bldg/Unit Number...">
-                <!--city-->
-                <label class="form-label form-inline" for="city">Enter your city:</label>
-                <input class="form-input" type="text" id="city" name="city" placeholder="Atlanta...">
-                <!--state-->
-                <label class="form-label form-inline" for="state">Select your US state/territory from the
-                    list:</label>
-                <select class="form-select" id="state" name="state">
-                    <option>Choose an option</option>
-                    {{#each statesArr as | state |}}
-                    <option>{{state}}</option>
-                    {{/each}}
-                </select>
-                <!--zip-->
-                <label class="form-label form-inline" for="zip">Enter your zip code:</label>
-                <input class="form-input" type="text" id="zip" name="zip" />
-            </div>
-        </div>
+            </div> <!--CARD HEADER END-->
+            <div class="accordion accCard"> <!--ACCORDION START-->
+                <input type="checkbox" id="accordion-2" name="accordion-checkbox" hidden> <!--ACCORDION ARROW START-->
+                <label class="accordion-header" for="accordion-2">
+                    <i class="icon icon-arrow-right mr-1"></i>
+                </label> <!--ACCORDION ARROW END-->
+                <div class="accordion-body"> <!--ACCORDION BODY START-->
+                    <div class="card-body"> <!--CARD BODY START-->
+                        <!--first_name-->
+                        <label class="form-label form-inline" for="first_name">Enter your FIRST Name:</label>
+                        <input class="form-input" type="text" id="first_name" name="first_name" />
+                        <!--last_name-->
+                        <label class="form-label form-inline" for="last_name">Enter your LAST Name:</label>
+                        <input class="form-input" type="text" id="last_name" name="last_name" />
+                        <!--email-->
+                        <label class="form-label form-inline" for="email">Enter your email:</label>
+                        <input class="form-input" type="email" id="email" name="email" placeholder="Type email here..."
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,14}$" />
+                        <!--personal phone-->
+                        <label class="form-label form-inline" for="personal_phone">Enter your personal phone
+                            number:</label>
+                        <input class="form-input" type="tel" id="personal_phone" name="personal_phone" />
+                        <!--address 1--> <!--address 2-->
+                        <label class="form-label form-inline" for="address1">Enter your address:</label>
+                        <input class="form-input" type="text" id="address1" name="address1"
+                            placeholder="123 Main St...">
+                        <input class="form-input" type="text" id="address2" name="address2"
+                            placeholder="Apt/Bldg/Unit Number...">
+                        <!--city-->
+                        <label class="form-label form-inline" for="city">Enter your city:</label>
+                        <input class="form-input" type="text" id="city" name="city" placeholder="Atlanta...">
+                        <!--state-->
+                        <label class="form-label form-inline" for="state">Select your US state/territory from the
+                            list:</label>
+                        <select class="form-select" id="state" name="state">
+                            <option>Choose an option</option>
+                            {{#each statesArr as | state |}}
+                            <option>{{state}}</option>
+                            {{/each}}
+                        </select>
+                        <!--zip-->
+                        <label class="form-label form-inline" for="zip">Enter your zip code:</label>
+                        <input class="form-input" type="text" id="zip" name="zip" />
+                    </div> <!--CARD BODY END-->
+                </div> <!--ACCORDION BODY END-->
+            </div> <!--ACCORDION END-->
+        </div><!--CARD END-->
 
         <!--GENDER, SEXUALITY, ETHNICITY-->
         <div class="card registercard">
