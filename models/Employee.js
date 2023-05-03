@@ -6,13 +6,13 @@ class Employee extends Model { }
 Employee.init(
   {
     id: {
-      type: DataTypes.STRING,
+      type: DataTypes.UUID,
       primaryKey: true,
-      references: {
-        model: 'user',
-        key: 'usr_name'
-      }
-
+      defaultValue: DataTypes.UUIDV4,
+      // references: {
+      //   model: 'user',
+      //   key: 'id'
+      // }
     },
     first_name: {
       type: DataTypes.STRING,
@@ -32,7 +32,7 @@ Employee.init(
     },
     address1: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     address2: {
       type: DataTypes.STRING,
@@ -40,18 +40,21 @@ Employee.init(
     },
     city: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     state: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         len: [2]
       }
     },
     zip: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true,
+      validate: {
+        len: [5]
+      }
     },
     sex: {
       type: DataTypes.STRING,
