@@ -11,7 +11,7 @@
   body {
     font-family: 'Roboto', Tahoma, Verdana, sans-serif;
     background-color: var(--light);
-    color: var(--dark);
+    color: var(--dark) !important;
     margin: 20px !important;
   }
 
@@ -42,4 +42,17 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* REGISTER PAGE */
+div.registercard{
+  margin-bottom: 1rem;
+}
+button.submit {
+  margin: 1rem;
+  background-color: var(--mustard);
+  border: var(--mustard);
+}
+p.exampletext {
+  color: var(--gray)
 }
