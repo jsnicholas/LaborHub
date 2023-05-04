@@ -6,6 +6,7 @@
     --lightblue: #2B5381ff;
     --rust: #A94B2Cff;
     --mustard: #FBBF30ff;
+    --green: #93C572;
 }
 
   body {
@@ -56,6 +57,14 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* LOGIN PAGE */
+
+button.register {
+  margin: 1rem;
+  background-color: var(--green);
+  border: var(--green);
 }
 
 /* REGISTER PAGE */
