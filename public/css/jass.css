@@ -45,6 +45,10 @@
   padding: 0.4rem;
 }
 
+/* login card */
+.login-card{
+margin-inline:auto;
+}
 /* LINKS */
 a {
     text-decoration: none;
