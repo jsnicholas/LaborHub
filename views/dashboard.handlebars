@@ -1,4 +1,12 @@
 {{> nav}}
+<div class="dashboard-content">
+<div class="h2">
+    {{#if first_name}}
+Welcome, {{first_name}} {{last_name}}
+{{/if}}
+</div>
+<div class="divider"></div>
+
 <main class="dashboard-content columns mx-1">
 {{!-- DASHBOARD CARDS --}}
 {{!-- DUES --}}
@@ -25,3 +33,4 @@
 </div>
 
 </main> 
+</div>

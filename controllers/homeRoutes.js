@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Employee } = require('../models');
 const withAuth = require('../utils/auth');
 const bcrypt = require('bcrypt');
 const statesUS = require('../utils/json/states_hash.json')
@@ -30,29 +30,47 @@ router.get('/login', (req, res) => {
 
   router.post('/login', async (req, res) => {
     try {
-      const userData = await User.findOne({ where: { email: req.body.email } });
-      if (!userData) {
-        res
-          .status(400)
-          .render('login', { error: 'Incorrect email or password, please try again' });
-        return;
-      }
-
-      const validPassword = await userData.checkPassword(req.body.password);
-
-      if (!validPassword) {
-        res
-          .status(400)
-          .render('login', { error: 'Incorrect email or password, please try again' });
-        return;
-      }
-
-      req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.logged_in = true;
-
-        res.json({ user: userData, message: 'You are now logged in!' });
+      await User.findOne({
+        where:
+        {
+          email: req.body.email
+        }
+      }).then(async (result) => {
+        console.log(`The user is logged in: ${JSON.stringify(result.id)}`);
+        const employeeID = await Employee.findOne({
+          where: {
+            user_id: result.id
+          }
+        })
+        console.log(`We found an employee : ${JSON.stringify(employeeID)}`);
+        hashedPassword = result.password;
+        if (req.body.password === hashedPassword) {
+          req.session.loggedIn = true;
+          res.render('dashboard', { first_name: employeeID.first_name, last_name: employeeID.last_name })
+        }
       });
+      // if (!userData) {
+      //   res
+      //     .status(400)
+      //     .render('login', { error: 'Incorrect email or password, please try again' });
+      //   return;
+      // }
+
+      // const validPassword = await userData.checkPassword(req.body.password);
+
+      // if (!validPassword) {
+      //   res
+      //     .status(400)
+      //     .render('login', { error: 'Incorrect email or password, please try again' });
+      //   return;
+      // }
+
+      // req.session.save(() => {
+      //   req.session.user_id = userData.id;
+      //   req.session.logged_in = true;
+
+      //   res.json({ user: userData, message: 'You are now logged in!' });
+      // });
 
     } catch (err) {
       res.status(400).json(err);
@@ -80,7 +98,7 @@ router.post("/register", async (req, res) => {
             password: hash
           })
         })
-        res.render("login", { error: "Successfully registered. Please log in." });
+        res.render("login", { message: "Successfully registered. Please log in." });
       }
     })
   } catch (err) {
@@ -98,8 +116,8 @@ router.get('/register', (req, res) => {
   res.render('register', { statesArr });
 });
 
-router.get('/dashboard', (req, res) => {
-  res.render('dashboard')
+router.get('/dashboard', withAuth, (req, res) => {
+  res.render('dashboard', { first_name: req.session.first_name, last_name: req.session.last_name })
 })
 
 module.exports = router;
