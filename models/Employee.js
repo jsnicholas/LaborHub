@@ -9,10 +9,19 @@ Employee.init(
       type: DataTypes.UUID,
       primaryKey: true,
       defaultValue: DataTypes.UUIDV4,
+      unique: true,
       // references: {
       //   model: 'user',
       //   key: 'id'
       // }
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
     first_name: {
       type: DataTypes.STRING,
@@ -25,6 +34,7 @@ Employee.init(
     email: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true
     },
     personal_phone: {
       type: DataTypes.INTEGER,

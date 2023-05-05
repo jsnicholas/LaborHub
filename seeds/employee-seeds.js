@@ -15,7 +15,8 @@ const employeeData = [
         title: 'Engineer',
         ethnicity: 'African-American',
         base_rate: '50.00',
-        annual_salary: '104000.00'
+        annual_salary: '104000.00',
+        user_id: 1
     }
 ];
 
