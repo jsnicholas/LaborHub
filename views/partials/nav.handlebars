@@ -11,7 +11,12 @@
       <ul class="menu">
         <a href="/" class="btn btn-link">HOME</a>
         <a href="/dashboard" class="btn btn-link">DASHBOARD</a>
-        <a href="/login" class="btn btn-link">LOGIN</a>
+        {{#if loggedIn}}
+          <a href="/logout" class="btn btn-link">LOGOUT</a>
+        {{else}}
+          <a href="/login" class="btn btn-link">LOGIN</a>
+
+        {{/if}}
       </ul>
     </div>
 
@@ -30,12 +35,21 @@
           height="20"
           width="20"
         /><a href="/dashboard" class="text-light">DASHBOARD</a></span>
-      <span><img
-          src="./icons/logout.svg"
-          alt="home icon"
-          height="20"
-          width="20"
-        /><a href="/login" class="text-light">LOGIN</a></span>
+      {{#if loggedIn}}
+        <span><img
+            src="./icons/logout.svg"
+            alt="home icon"
+            height="20"
+            width="20"
+          /><a href="/logout" class="text-light">LOGOUT</a></span>
+      {{else}}
+        <span><img
+            src="./icons/logout.svg"
+            alt="home icon"
+            height="20"
+            width="20"
+          /><a href="/login" class="text-light">LOGIN</a></span>
+      {{/if}}
     </div>
   </nav>
 </header>

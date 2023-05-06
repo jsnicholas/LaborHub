@@ -1,7 +1,7 @@
 {{> nav}}
 {{!-- main page content --}}
 {{#if loggedIn}}
-<section class="main">Welcome~~</section>
+{{>dashboard}}
 {{else}}
-<section class="main">Please log in.</section>
+{{> login}}
 {{/if}}
