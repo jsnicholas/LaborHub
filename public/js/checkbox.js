@@ -1,23 +1,18 @@
-function reqCheckOne(){
-    //select input checkbox from doc
-    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    // if a checkbox is checked, all required attr are removed.
-    for (let i=0; i<checkboxes.length; i++){
+// START FUNCTION
+function valThis(){
+     let checkboxes = document.getElementsByClassName('formcheckbox')
+     let isChecked = false;
+     for (let i=0; i<checkboxes.length; i++) {
         if (checkboxes[i].checked) {
-            checkboxes.removeAttribute('required')
-        } //end conditional
-    } // end for loop
-}; //end function
+            isChecked = true;
+        };
+     };
+     if (isChecked) {
+        //checkboxes.removeAttr('required');
+        console.log('Thank you. You selected at least one checkbox: ' , checkboxes);
+    } else {
+        alert('Please, you must select at least one checkbox!');
+    }
+}
 
-reqCheckOne()
-
-// not working
-// ERROR in CONSOLE:
-    // (1)
-    // p://localhost:3001/public/js/checkbox.js net::ERR_ABORTED 404 (Not Found)
-    //(2)
-    //Refused to execute script from 'http://localhost:3001/public/js/checkbox.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.
-
-//POSSIBLE SOLUTION?
-    // might need to create a custom event
-    // https://vanillajstoolkit.com/reference/event-listeners/customevent/
+// REFERENCE: https://stackoverflow.com/questions/22238368/how-can-i-require-at-least-one-checkbox-be-checked-before-a-form-can-be-submitte , https://www.w3schools.com/jsref/event_onclick.asp
