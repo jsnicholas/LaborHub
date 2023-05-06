@@ -1,22 +1,37 @@
 {{> alert}}
-<div class="columns">
-  <div class="column col-md-12 col-6 login-card">
-<div class="card form-group">
-  <div class="card-header">
-  <div class="card-title h4">Login Below</div>
-  <form action="./login" method="POST">
-    <label class="form-label" for="email">Email:</label>
-    <input class="form-input" type="text" id="email" name="email"/>
-    <label class="form-label" for="password">Password:</label>
-    <input class="form-input" type="password" id="password" name="password"/>
-    <button class="btn submit" type="submit">Login</button>
-  </form>
-</div>
-<div class="card-footer">
-  <h5>New to LaborHub? Click to register!</h5>
-  <a href="/register">
-    <button class="btn register">Register Here</button>
-  </a>
-</div>
-</div>
+
+<div class="column col-md-12 col-6 login-card">
+  <!--START CARD-->
+  <div class="card form-group">
+    <div class="columns">
+      <!--START COLUMN ONE-->
+      <div class="column">
+        <div class="card-header">
+          <div class="card-title h4">Login Below</div>
+        </div>
+        <form action="./login" method="POST" class="loginform">
+          <label class="form-label" for="email">Email:</label>
+          <input class="form-input" type="text" id="email" name="email" />
+          <label class="form-label" for="password">Password:</label>
+          <input class="form-input" type="password" id="password" name="password" />
+          <a href="/dashboard">
+            <button class="btn submit" type="submit">Login</button>
+          </a>
+        </form>
+      </div>
+      <!--END COLUMN ONE-->
+      <!--VERTICAL DIVIDER-->
+      <div class="divider-vert" data-content="OR"></div>
+      <!--START COLUMN TWO-->
+      <div class="column">
+        <div class="card-header">
+          <div class="card-title h4">New to LaborHub? Click to register!</div>
+        </div>
+        <a href="/register">
+          <button class="btn register">Register Here</button>
+        </a>
+      </div>
+      <!--END COLUMN TWO-->
+    </div>
+  </div>
 </div>

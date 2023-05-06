@@ -53,10 +53,17 @@
   padding: 0.4rem;
 }
 
-/* login card */
-.login-card{
-margin-inline:auto;
+/* LOGIN CARD */
+.login-card {
+  margin-inline:auto;
+  margin-top: 1rem;
 }
+
+.loginform {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 /* LINKS */
 a {
     text-decoration: none;
