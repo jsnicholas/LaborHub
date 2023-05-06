@@ -22,6 +22,10 @@ router.post("/", async (req, res) => {
                     })
                     Employee.create({
                         // info goes here for employee
+                        id: req.body.id,
+                        first_name: req.body.first_name,
+                        last_name: req.body.last_name,
+                        email: req.body.email,
                     })
                 })
                 res.render("login", { message: "Successfully registered. Please log in." });
