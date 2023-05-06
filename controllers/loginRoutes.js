@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
         });
         try {
             // we need to implement bcrypt compare
-            if (req.body.password === userFromDb.password) {
+            if (bcrypt.compare(req.body.password, userFromDb.password)) {
                 const employeeFromDb = await Employee.findOne({
                     where: {
                         user_id: userFromDb.id
