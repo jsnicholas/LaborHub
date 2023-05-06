@@ -14,4 +14,6 @@ function ifCheckedVal(){
         alert('Please, you must select at least one checkbox!');
     }
 }
-// REFERENCE: https://stackoverflow.com/questions/22238368/how-can-i-require-at-least-one-checkbox-be-checked-before-a-form-can-be-submitte , https://www.w3schools.com/jsref/event_onclick.asp
+// REFERENCES: 
+//https://stackoverflow.com/questions/22238368/how-can-i-require-at-least-one-checkbox-be-checked-before-a-form-can-be-submitte
+//https://www.w3schools.com/jsref/event_onclick.asp
