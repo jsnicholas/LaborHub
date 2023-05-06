@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const statesUS = require('../utils/json/states_hash.json')
+const statesUS = require('../utils/json/states_hash.json');
+const { User, Employee } = require('../models');
 const bcrypt = require('bcrypt');
-
 
 router.post("/", async (req, res) => {
     try {
@@ -28,7 +28,8 @@ router.post("/", async (req, res) => {
             }
         })
     } catch (err) {
-        res.send("error")
+        console.log(err);
+        res.send(err)
     }
 });
 
