@@ -9,11 +9,7 @@ Employee.init(
       type: DataTypes.UUID,
       primaryKey: true,
       defaultValue: DataTypes.UUIDV4,
-      unique: true,
-      // references: {
-      //   model: 'user',
-      //   key: 'id'
-      // }
+      unique: true
     },
     user_id: {
       type: DataTypes.INTEGER,
