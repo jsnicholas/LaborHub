@@ -38,7 +38,7 @@ Employee.init(
     },
     personal_phone: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     address1: {
       type: DataTypes.STRING,
@@ -76,23 +76,23 @@ Employee.init(
     },
     hire_date: {
       type: DataTypes.DATE,
-      allowNull: false
+      allowNull: true
     },
     position: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     ethnicity: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     work_phone: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
     },
     work_phoneext: {
       type: DataTypes.INTEGER,
@@ -100,11 +100,11 @@ Employee.init(
     },
     base_rate: {
       type: DataTypes.DECIMAL,
-      allowNull: false
+      allowNull: true
     },
     annual_salary: {
       type: DataTypes.DECIMAL,
-      allowNull: false
+      allowNull: true
     }
   },
   {
