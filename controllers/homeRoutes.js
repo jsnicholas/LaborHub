@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { User, Employee } = require('../models');
 const withAuth = require('../utils/auth');
-const bcrypt = require('bcrypt');
-const statesUS = require('../utils/json/states_hash.json')
 
 router.get('/', async (req, res) => {
   try {
@@ -54,44 +52,19 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.post("/register", async (req, res) => {
-  try {
-    User.findOne({
-      where: {
-        email: req.body.email
-      }
-    }).then(async (result) => {
-      if (result !== null) {
-        res.render("register", { error: "User already exists. Please try registering with a new username or email" })
-      } else {
-        const salt = await bcrypt.genSalt(10)
-        await bcrypt.hash(req.body.password, salt).then(function (hash) {
-          User.create({
-            usr_name: req.body.usr_name,
-            email: req.body.email,
-            password: hash
-          })
-        })
-        res.render("login", { message: "Successfully registered. Please log in." });
-      }
-    })
-  } catch (err) {
-    res.send("error")
-  }
-});
-
-router.get('/register', (req, res) => {
-  const statesArr = Object.keys(statesUS)
-  if (req.session.logged_in) {
-    res.redirect('/');
-    return;
-  }
-
-  res.render('register', { statesArr });
-});
 
 router.get('/dashboard', withAuth, (req, res) => {
   res.render('dashboard', { first_name: req.session.first_name, last_name: req.session.last_name, loggedIn: req.session.loggedIn })
 })
+
+router.get('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy();
+    res.render('index', { message: "You have been logged out" })
+    // res.status(204).end();
+  } else {
+    res.redirect('/')
+  }
+});
 
 module.exports = router;
