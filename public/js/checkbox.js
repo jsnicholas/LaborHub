@@ -1,6 +1,3 @@
-// if user checks at least one input from the list,
-// then all "required" attr are removed
-
 function reqCheckOne(){
     //select input checkbox from doc
     let checkboxes = document.querySelectorAll('input[type="checkbox"]');
