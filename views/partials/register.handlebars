@@ -56,17 +56,17 @@
                         <label class="form-label form-inline" for="personal_phone">Preferred Contact Phone Number:</label>
                         <input class="form-input" type="tel" id="personal_phone" name="personal_phone" required/>
                         <!--address 1 allow null--> <!--address 2 allow null-->
-                        <label class="form-label form-inline" for="address1">Home Address:</label>
+                        <label class="form-label form-inline" for="address1">Home Address (Not Required):</label>
                         <input class="form-input" type="text" id="address1" name="address1"
                             placeholder="123 Main St...">
                         <input class="form-input" type="text" id="address2" name="address2"
                             placeholder="Apt/Bldg/Unit Number...">
                         <!--city allow null-->
-                        <label class="form-label form-inline" for="city">City:</label>
+                        <label class="form-label form-inline" for="city">City (Not Required):</label>
                         <input class="form-input" type="text" id="city" name="city" placeholder="Atlanta">
                         <!--state allow null-->
                         <label class="form-label form-inline" for="state">Select U.S. State or Territory from the
-                            List:</label>
+                            List (Not Required):</label>
                         <select class="form-select" id="state" name="state">
                             <option>Choose an option</option>
                             {{#each statesArr as | state |}}
@@ -74,7 +74,7 @@
                             {{/each}}
                         </select>
                         <!--zip allow null-->
-                        <label class="form-label form-inline" for="zip">Zip Code:</label>
+                        <label class="form-label form-inline" for="zip">Zip Code (Not Required):</label>
                         <input class="form-input" type="text" id="zip" name="zip" />
                     </div> <!--CARD BODY END-->
                 </div> <!--ACCORDION BODY END-->
@@ -94,7 +94,7 @@
                 <div class="accordion-body"> <!--ACCORDION BODY START-->
                     <div class="card-body"> <!--CARD BODY START-->
                         <!--sex allow null-->
-                        <p class="exampletext">Gender Identity:</p>
+                        <p class="exampletext">Gender Identity (Not Required):</p>
                         <label class="form-radio">
                             <input type="radio" id="sex" name="sex">
                             <i class="form-icon"></i> Female
@@ -128,7 +128,7 @@
                             <i class="form-icon"></i> Prefer to Not Identify
                         </label>
                         <!--sexual_orientation allow null-->
-                        <p class="exampletext">Sexual Orientation:</p>
+                        <p class="exampletext">Sexual Orientation (Not Required):</p>
                         <label class="form-radio">
                             <input type="radio" id="sexual_orientation" name="sexual_orientation">
                             <i class="form-icon"></i> Asexual
@@ -217,12 +217,12 @@
                         <!--title-->
                         <label class="form-label form-inline" for="title">Title:</label>
                         <input class="form-input" type="text" id="title" name="title" required/>
-                        <!--work phone-->
-                        <label class="form-label form-inline" for="work_phone">Work Phone Number:</label>
+                        <!--work phone allow null-->
+                        <label class="form-label form-inline" for="work_phone">Work Phone Number (Not Required):</label>
                         <input class="form-input" type="tel" id="work_phone" name="work_phone" />
-                        <!--work phone ext-->
+                        <!--work phone ext allow null-->
                         <label class="form-label form-inline" for="work_phoneext">Work Phone
-                            Extension:</label>
+                            Extension (Not Required):</label>
                         <input class="form-input" type="number" id="work_phoneext" name="work_phoneext"
                             placeholder="0000" />
                         <!--base rate-->
