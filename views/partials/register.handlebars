@@ -18,13 +18,13 @@
                         <label class="form-label form-inline" for="usr_name">Username:</label>
                         <input class="form-input form-inline" type="text" id="usr_name" name="usr_name" />-->
                         <!--email-->
-                        <label class="form-label form-inline" for="email">Login Email for Your Account:</label>
+                        <label class="form-label form-inline" for="email" >Login Email for Your Account:</label>
                         <input class="form-input" type="email" id="email" name="email"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,14}$" />
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,14}$" required/>
                         <!--password-->
                         <label class="form-label form-inline" for="password">Password:</label>
                         <input class="form-input" type="password" id="password" name="password"
-                            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" />
+                            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" required/>
                     </div> <!--CARD BODY END-->
                 </div> <!--ACCORDION BODY END-->
             </div> <!--ACCORDION END-->
@@ -44,27 +44,27 @@
                     <div class="card-body"> <!--CARD BODY START-->
                         <!--first_name-->
                         <label class="form-label form-inline" for="first_name">First Name:</label>
-                        <input class="form-input" type="text" id="first_name" name="first_name" />
+                        <input class="form-input" type="text" id="first_name" name="first_name" required/>
                         <!--last_name-->
                         <label class="form-label form-inline" for="last_name">Last Name:</label>
-                        <input class="form-input" type="text" id="last_name" name="last_name" />
+                        <input class="form-input" type="text" id="last_name" name="last_name" required/>
                          <!--email-->
                         <label class="form-label form-inline" for="email">Preferred Contact Email:</label>
                         <input class="form-input" type="email" id="preferred-email" name="preferred-email" placeholder="Can be the Same or Different Email from Your Login Email"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,14}$" />
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,14}$" required/>
                         <!--personal phone-->
-                        <label class="form-label form-inline" for="personal_phone">Personal Phone Number:</label>
-                        <input class="form-input" type="tel" id="personal_phone" name="personal_phone" />
-                        <!--address 1--> <!--address 2-->
+                        <label class="form-label form-inline" for="personal_phone">Preferred Contact Phone Number:</label>
+                        <input class="form-input" type="tel" id="personal_phone" name="personal_phone" required/>
+                        <!--address 1 allow null--> <!--address 2 allow null-->
                         <label class="form-label form-inline" for="address1">Home Address:</label>
                         <input class="form-input" type="text" id="address1" name="address1"
                             placeholder="123 Main St...">
                         <input class="form-input" type="text" id="address2" name="address2"
                             placeholder="Apt/Bldg/Unit Number...">
-                        <!--city-->
+                        <!--city allow null-->
                         <label class="form-label form-inline" for="city">City:</label>
                         <input class="form-input" type="text" id="city" name="city" placeholder="Atlanta">
-                        <!--state-->
+                        <!--state allow null-->
                         <label class="form-label form-inline" for="state">Select U.S. State or Territory from the
                             List:</label>
                         <select class="form-select" id="state" name="state">
@@ -73,7 +73,7 @@
                             <option>{{state}}</option>
                             {{/each}}
                         </select>
-                        <!--zip-->
+                        <!--zip allow null-->
                         <label class="form-label form-inline" for="zip">Zip Code:</label>
                         <input class="form-input" type="text" id="zip" name="zip" />
                     </div> <!--CARD BODY END-->
@@ -93,7 +93,7 @@
                 </label> <!--ACCORDION ARROW END-->
                 <div class="accordion-body"> <!--ACCORDION BODY START-->
                     <div class="card-body"> <!--CARD BODY START-->
-                        <!--sex-->
+                        <!--sex allow null-->
                         <p class="exampletext">Gender Identity:</p>
                         <label class="form-radio">
                             <input type="radio" id="sex" name="sex">
@@ -127,7 +127,7 @@
                             <input type="radio" id="sex" name="sex">
                             <i class="form-icon"></i> Prefer to Not Identify
                         </label>
-                        <!--sexual_orientation-->
+                        <!--sexual_orientation allow null-->
                         <p class="exampletext">Sexual Orientation:</p>
                         <label class="form-radio">
                             <input type="radio" id="sexual_orientation" name="sexual_orientation">
@@ -210,13 +210,13 @@
                     <div class="card-body"> <!--CARD BODY START-->
                         <!--hire date-->
                         <label class="form-label form-inline" for="hire_date">Date of Hire:</label>
-                        <input class="form-input" type="date" id="hire_date" name="hire_date" />
+                        <input class="form-input" type="date" id="hire_date" name="hire_date" required/>
                         <!--position-->
                         <label class="form-label form-inline" for="position">Position:</label>
-                        <input class="form-input" type="text" id="position" name="position" />
+                        <input class="form-input" type="text" id="position" name="position" required/>
                         <!--title-->
                         <label class="form-label form-inline" for="title">Title:</label>
-                        <input class="form-input" type="text" id="title" name="title" />
+                        <input class="form-input" type="text" id="title" name="title" required/>
                         <!--work phone-->
                         <label class="form-label form-inline" for="work_phone">Work Phone Number:</label>
                         <input class="form-input" type="tel" id="work_phone" name="work_phone" />
@@ -228,11 +228,11 @@
                         <!--base rate-->
                         <label class="form-label form-inline" for="base_rate">Base Rate: </label>
                         <p class="exampletext">Example: Write "23" instead of "$23/hour"</p>
-                        <input class="form-input" type="number" id="base_rate" name="base_rate" />
+                        <input class="form-input" type="number" id="base_rate" name="base_rate" required/>
                         <!--annual salary-->
                         <label class="form-label form-inline" for="annual_salary">Annual Salary: </label>
                         <p class="exampletext">Example: Write "40000" instead of "$40,000/year"</p>
-                        <input class="form-input" type="number" id="annual_salary" name="annual_salary" />
+                        <input class="form-input" type="number" id="annual_salary" name="annual_salary" required/>
                     </div> <!--CARD BODY END-->
                 </div> <!--ACCORDION BODY END-->
             </div> <!--ACCORDION END-->
@@ -240,7 +240,7 @@
 
         <!--SUBMIT BUTTON-->
         <a href="/login">
-            <button class="submit btn">Submit Registration</button>
+            <button class="submit btn" type="submit">Submit Registration</button>
         </a>
 
 </div>
