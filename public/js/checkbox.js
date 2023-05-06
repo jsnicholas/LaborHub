@@ -1,5 +1,5 @@
 // START FUNCTION
-function valThis(){
+function ifCheckedVal(){
      let checkboxes = document.getElementsByClassName('formcheckbox')
      let isChecked = false;
      for (let i=0; i<checkboxes.length; i++) {
