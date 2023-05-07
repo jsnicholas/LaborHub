@@ -59,6 +59,20 @@
   padding: 0.4rem;
 }
 
+/* PAYMENT CARDS */
+table {
+  color: var(--dark);
+}
+
+/*td.paiddues {
+background-color: var(--green);
+}*/
+
+td.missedpayment {
+  background-color: var(--rust);
+  font-weight: bold;
+}
+
 /* LOGIN CARD */
 .login-card {
   margin-inline:auto;
