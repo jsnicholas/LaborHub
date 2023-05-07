@@ -41,13 +41,14 @@ router.post("/", async (req, res) => {
                         work_phone: req.body.work_phone,
                         work_phoneext: req.body.work_phoneext,
                         base_rate: req.body.base_rate,
-                        annual_salary: req.body.annual_salary
+                        annual_salary: req.body.annual_salary,
                     })
                 })
                 res.render("login", { message: "Successfully registered. Please log in." });
             }
         })
     } catch (err) {
+        console.log(req.body.ethnicity)
         console.log(err);
         res.send(err)
     }
