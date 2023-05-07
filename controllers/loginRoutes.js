@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Employee } = require('../models');
 const bcrypt = require('bcrypt');
+// Added variables to check for seed users
 const tina = "tina@email.com"
 const nick = "nick@email.com"
 
@@ -22,7 +23,8 @@ router.post('/', async (req, res) => {
             email: req.body.email
         }
     });
-    try {
+    try { 
+        // checks to see if tina seed is being used, and doesn't try to unsalt/unhash password if so. 
         if (req.body.email = tina) {
             if (req.body.password == 'password') {
                 const employeeFromDb = await Employee.findOne({
@@ -36,6 +38,7 @@ router.post('/', async (req, res) => {
                 // return;
             }
         }
+        // checks to see if nick seed is being used, and doesn't try to unsalt/unhash password if so. 
         if (req.body.email = nick) {
             if (req.body.password == '123456789') {
                 const employeeFromDb = await Employee.findOne({
