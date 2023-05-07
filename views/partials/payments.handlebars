@@ -17,11 +17,11 @@
     <div class="card-title text-center h5">Your Payment History</div>
   </div>
   <div class="card-body">
-    <table class="table">
+    <table class="table payhisttable">
       <thead>
         <tr>
           <th>Date</th>
-          <th>Paid</th>
+          <th>Dues Paid</th>
         </tr>
       </thead>
       <tbody>
@@ -29,12 +29,12 @@
           {{#if PayHist.paid === true}}
             {{#each PayHist}}
             <td>{{due_date}}</td>
-            <td>Paid.</td>
+            <td class="paiddues">Paid.</td>
             {{/each}}
           {{else}}
             {{#each PayHist}}
             <td>{{due_date}}</td>
-            <td>Missed payment. Please contact your representative.</td>
+            <td class="missedpayment">Missed payment. Please contact your representative.</td>
             {{/each}}
           {{/if}}
         </tr>
