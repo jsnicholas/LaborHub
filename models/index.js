@@ -3,7 +3,7 @@ const Employee = require('./Employee');
 const Dates = require('./Dates');
 const PayHist = require('./PayHist');
 
-module.exports = { User, Employee };
+module.exports = { User, Employee, Dates, PayHist };
 
 const { DataTypes } = require('sequelize');
 
@@ -21,13 +21,28 @@ Employee.hasMany(PayHist, {
     foreignKey: 'employee_id'
 });
 
-Dates.belongsToMany(PayHist, {
-    foreignKey: 'date_id',
-    targetKey: 'id',
-    through: 'payments'
+PayHist.belongsTo(Employee, {
+    foreignKey: 'employee_id'
+})
+
+Dates.hasMany(PayHist, {
+    foreignKey: 'date_id'
 });
 
-// PayHist.belongsToMany(Dates, {
+// PayHist.hasMany(Dates, {
+//     foreignKey: 'due'
+// })
+// Dates.belongsToMany(PayHist)
+
+// PayHist.belongsTo(Dates);
+
+// Dates.belongsToMany(PayHist, {
+//     through: 'payments',
 //     foreignKey: 'date_id',
-//     through: 'payments'
+//     targetKey: 'id'
+// });
+
+// PayHist.belongsToMany(Dates, {
+    //     through: 'payments',
+//     foreignKey: 'date_id'
 // });
