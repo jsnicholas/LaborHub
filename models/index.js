@@ -2,8 +2,9 @@ const User = require('./User');
 const Employee = require('./Employee');
 const Dates = require('./Dates');
 const PayHist = require('./PayHist');
+const Rep = require('./Rep');
 
-module.exports = { User, Employee, Dates, PayHist };
+module.exports = { User, Employee, Dates, PayHist, Rep };
 
 const { DataTypes } = require('sequelize');
 
@@ -26,4 +27,3 @@ PayHist.belongsTo(Employee, {
 Dates.hasMany(PayHist, {
     foreignKey: 'date_id'
 });
-

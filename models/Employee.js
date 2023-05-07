@@ -35,7 +35,7 @@ Employee.init(
       unique: true
     },
     personal_phone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
       allowNull: true,
     },
     address1: {
@@ -86,7 +86,7 @@ Employee.init(
       allowNull: true
     },
     work_phone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
       allowNull: true,
     },
     work_phoneext: {
