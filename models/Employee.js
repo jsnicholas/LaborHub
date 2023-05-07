@@ -60,9 +60,6 @@ Employee.init(
     zip: {
       type: DataTypes.INTEGER,
       allowNull: true,
-      validate: {
-        len: [5]
-      }
     },
     sex: {
       type: DataTypes.STRING,

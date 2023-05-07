@@ -60,7 +60,8 @@
 
                         <label class="form-label form-inline" for="personal_phone">Preferred Contact Phone
                             Number:</label>
-                        <input class="form-input" type="tel" id="personal_phone" name="personal_phone" required />
+                        <p class="exampletext text-small"> Please include Area Code. Example: Write 8035764434 instead of 803-576-4434.</p>
+                        <input class="form-input" type="number" id="personal_phone" name="personal_phone" required minlength="10" maxlength="10"/>
                         <!--address 1 allow null--> <!--address 2 allow null-->
                         <label class="form-label form-inline" for="address1">Home Address (Not Required):</label>
 
@@ -82,7 +83,7 @@
                         </select>
                         <!--zip allow null-->
                         <label class="form-label form-inline" for="zip">Zip Code (Not Required):</label>
-                        <input class="form-input" type="text" id="zip" name="zip" />
+                        <input class="form-input" type="number" id="zip" name="zip" minlength="5" maxlength="5"/>
                     </div> <!--CARD BODY END-->
                 </div> <!--ACCORDION BODY END-->
             </div> <!--ACCORDION END-->
@@ -103,101 +104,101 @@
                         <!--sex allow null-->
                         <p class="labeltext">Gender Identity (Not Required):</p>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sex">
-                            <i class="form-icon"></i> Female
+                            <input type="radio" class="formradio" name="sex" value="Cis Female">
+                            <i class="form-icon"></i> Cis Female
                         </label>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sex">
-                            <i class="form-icon"></i> Male
+                            <input type="radio" class="formradio" name="sex" value="Cis Male">
+                            <i class="form-icon"></i> Cis Male
                         </label>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sex">
+                            <input type="radio" class="formradio" name="sex" value="Non-Binary">
                             <i class="form-icon"></i> Non-Binary
                         </label>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sex">
-                            <i class="form-icon"></i> Transgender-Female
+                            <input type="radio" class="formradio" name="sex" value="Trans Female">
+                            <i class="form-icon"></i> Trans Female
                         </label>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sex">
-                            <i class="form-icon"></i> Transgender-Male
+                            <input type="radio" class="formradio" name="sex" value="Trans Male">
+                            <i class="form-icon"></i> Trans Male
                         </label>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sex">
-                            <i class="form-icon"></i> Transgender-Non-Binary
-                        </label>
-                        <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sex">
+                            <input type="radio" class="formradio" name="sex" value="Other">
                             <i class="form-icon"></i> Other
                         </label>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sex">
+                            <input type="radio" class="formradio" name="sex" value="Prefer to Not Identify">
                             <i class="form-icon"></i> Prefer to Not Identify
                         </label>
                         <!--sexual_orientation allow null-->
                         <p class="labeltext">Sexual Orientation (Not Required):</p>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sexual_orientation">
+                            <input type="radio" class="formcheckbox" name="sexual_orientation" value="Asexual">
                             <i class="form-icon"></i> Asexual
                         </label>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sexual_orientation">
+                            <input type="radio" class="formradio" name="sexual_orientation" value="Bisexual">
                             <i class="form-icon"></i> Bisexual
                         </label>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sexual_orientation">
+                            <input type="radio" class="formradio" name="sexual_orientation" value="Gay">
                             <i class="form-icon"></i> Gay
                         </label>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sexual_orientation">
+                            <input type="radio" class="formradio" name="sexual_orientation" value="Heterosexual">
                             <i class="form-icon"></i> Heterosexual
                         </label>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sexual_orientation">
+                            <input type="radio" class="formradio" name="sexual_orientation" value="Lesbian">
                             <i class="form-icon"></i> Lesbian
                         </label>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sexual_orientation">
+                            <input type="radio" class="formcheckbox" name="sexual_orientation" value="Pansexual">
                             <i class="form-icon"></i> Pansexual
                         </label>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sexual_orientation">
+                            <input type="radio" class="formradio" name="sexual_orientation" value="Other">
                             <i class="form-icon"></i> Other
                         </label>
                         <label class="form-radio">
-                            <input type="radio" class="formcheckbox" name="sexual_orientation">
+                            <input type="radio" class="formradio" name="sexual_orientation" value="Prefer to Not Identify">
                             <i class="form-icon"></i> Prefer to Not Identify
                         </label>
                         <!--ethnicity-->
-                        <p class="labeltext">Ethnicity (Please select all that apply, or at least one from the list.):
+                        <p class="labeltext">Ethnicity (Please select the one that best applies.):
                         </p>
-                        <label class="form-checkbox">
-                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
-                            <i class="form-icon"></i> American Indian and Alaska Native
+                        <label class="form-radio">
+                            <input type="radio" class="formradio" name="ethnicity" onclick="ifCheckedVal()" value="American Indian or Alaskan Native">
+                            <i class="form-icon"></i> American Indian or Alaskan Native
                         </label>
-                        <label class="form-checkbox">
-                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
+                        <label class="form-radio">
+                            <input type="radio" class="formradio" name="ethnicity" onclick="ifCheckedVal()" value="Asian">
                             <i class="form-icon"></i> Asian
                         </label>
-                        <label class="form-checkbox">
-                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
+                        <label class="form-radio">
+                            <input type="radio" class="formradio" name="ethnicity" onclick="ifCheckedVal()" value="Black or African American">
                             <i class="form-icon"></i> Black or African American
                         </label>
-                        <label class="form-checkbox">
-                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
-                            <i class="form-icon"></i> Hispanic
+                        <label class="form-radio">
+                            <input type="radio" class="formradio" name="ethnicity" onclick="ifCheckedVal()" value="Hispanic">
+                            <i class="form-icon"></i> Hispanic or Latinx
                         </label>
-                        <label class="form-checkbox">
-                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
-                            <i class="form-icon"></i> Native Hawaiian and Other Pacific Islander
+                        <label class="form-radio">
+                            <input type="radio" class="formradio" name="ethnicity" onclick="ifCheckedVal()" value="Middle Eastern or North African">
+                            <i class="form-icon"></i> Middle Eastern or North African
                         </label>
-                        <label class="form-checkbox">
-                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
+                        <label class="form-radio">
+                            <input type="radio" class="formradio" name="ethnicity" onclick="ifCheckedVal()" value="Native Hawaiian or Other Pacific Islander">
+                            <i class="form-icon"></i> Native Hawaiian or Other Pacific Islander
+                        </label>
+                        <label class="form-radio">
+                            <input type="radio" class="formradio" name="ethnicity" onclick="ifCheckedVal()" value="White or Caucasian">
                             <i class="form-icon"></i> White or Caucasian
                         </label>
-                        <label class="form-checkbox">
-                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
-                            <i class="form-icon"></i> Some Other Race
+                        <label class="form-radio">
+                            <input type="checkbox" class="formradio" name="ethnicity" onclick="ifCheckedVal()" value="Other">
+                            <i class="form-icon"></i> Other
                         </label>
                     </div> <!--CARD BODY END-->
                 </div> <!--ACCORDION BODY END-->
@@ -228,14 +229,13 @@
                         <input class="form-input" type="text" id="title" name="title" required />
                         <!--work phone allow null-->
                         <label class="form-label form-inline" for="work_phone">Work Phone Number (Not Required):</label>
-                        <input class="form-input" type="tel" id="work_phone" name="work_phone" />
+                        <p class="exampletext text-small"> Please include Area Code. Example: Write 8035764434 instead of 803-576-4434.</p>
+                        <input class="form-input" type="number" id="work_phone" name="work_phone" minlength="10" maxlength="10"/>
                         <!--work phone ext allow null-->
-
-
                         <label class="form-label form-inline" for="work_phoneext">Work Phone
                             Extension (Not Required):</label>
-                        <input class="form-input" type="number" id="work_phoneext" name="work_phoneext"
-                            placeholder="0000" />
+                        <p class="exampletext text-small"> Example: Write 5555 instead of Ext5555.</p>
+                        <input class="form-input" type="number" id="work_phoneext" name="work_phoneext" />
                         <!--base rate-->
                         <label class="form-label form-inline" for="base_rate">Base Rate: </label>
                         <p class="exampletext text-small">Example: Write "23" instead of "$23/hour"</p>
