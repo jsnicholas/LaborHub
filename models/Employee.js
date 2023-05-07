@@ -37,9 +37,6 @@ Employee.init(
     personal_phone: {
       type: DataTypes.INTEGER,
       allowNull: true,
-      validate: {
-        len: [10]
-      },
     },
     address1: {
       type: DataTypes.STRING,
@@ -94,9 +91,6 @@ Employee.init(
     work_phone: {
       type: DataTypes.INTEGER,
       allowNull: true,
-      validate: {
-        len: [10]
-      },
     },
     work_phoneext: {
       type: DataTypes.INTEGER,
