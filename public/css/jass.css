@@ -60,13 +60,24 @@
 }
 
 /* PAYMENT CARDS */
+.pay-header {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pay-card {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.paybtn {
+  background-color: var(--green) !important;
+  padding-left: 1rem ;
+}
+
 table {
   color: var(--dark);
 }
-
-/*td.paiddues {
-background-color: var(--green);
-}*/
 
 td.missedpayment {
   background-color: var(--rust);
