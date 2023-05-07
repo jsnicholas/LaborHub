@@ -4,8 +4,8 @@ const employeeData = [
     {
         first_name: 'Tina',
         last_name: 'Croxton',
-        email: 'tina@gmail.com',
-        personal_phone: '1234567890',
+        email: 'tina@email.com',
+        personal_phone: 'Password1',
         address1: '123 Main St',
         city: 'Anywhere',
         State: 'GA',
