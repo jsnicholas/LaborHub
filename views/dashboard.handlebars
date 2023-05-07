@@ -1,36 +1,38 @@
 {{> nav}}
 <div class="dashboard-content">
-<div class="h2 text-center">
-    {{#if first_name}}
-Welcome, {{first_name}} {{last_name}}
-{{/if}}
-</div>
-<div class="divider"></div>
+ paymentspage
+    <div class="h2 text-center">
+        {{#if first_name}}
+            Welcome, {{first_name}} {{last_name}}
+        {{/if}}
+    </div>
+    <div class="divider"></div>
 
-<main class="dashboard-content columns mx-1">
-{{!-- DASHBOARD CARDS --}}
-{{!-- DUES --}}
-{{!-- {{#if dues}} --}}
-<div class="column col-6 col-xs-12">
-{{> dashboard/dues}}
-{{!-- {{/if}} --}}
-</div>
 
-{{!-- UNION REPRESENTATIVE --}}
-{{!-- {{#if hasRepresentative}} --}}
-<div class="column col-6 col-xs-12">
-{{> dashboard/myrep}}
-</div>
-{{!-- {{/if}} --}}
+    <main class="dashboard-content columns mx-1">
+        {{!-- DASHBOARD CARDS --}}
+        {{!-- DUES --}}
+        {{!-- {{#if dues}} --}}
+        <div class="column col-6 col-xs-12">
+            {{> dashboard/dues}}
+            {{!-- {{/if}} --}}
+        </div>
 
-{{!-- CALENDAR --}}
-<div class="column col-6 col-xs-12">
-{{> dashboard/calendar}}
-</div>
+        {{!-- UNION REPRESENTATIVE --}}
+        {{!-- {{#if hasRepresentative}} --}}
+        <div class="column col-6 col-xs-12">
+            {{> dashboard/myrep}}
+        </div>
+        {{!-- {{/if}} --}}
 
-<div class="column col-6 col-xs-12">
-{{> dashboard/messages}}
-</div>
+        {{!-- CALENDAR --}}
+        <div class="column col-6 col-xs-12">
+            {{> dashboard/calendar}}
+        </div>
 
-</main> 
+        <div class="column col-6 col-xs-12">
+            {{> dashboard/messages}}
+        </div>
+
+    </main>
 </div>
