@@ -48,7 +48,7 @@ router.post("/", async (req, res) => {
             }
         })
     } catch (err) {
-        console.log(req.body.ethnicity)
+        //console.log(req.body.ethnicity)
         console.log(err);
         res.send(err)
     }
