@@ -2,6 +2,7 @@ const seedEmployees = require('./employee-seeds');
 const seedUsers = require('./user-seeds');
 const seedDates = require('./date-seeds');
 const seedPayhist = require('./payhist-seeds');
+const seedRep = require('./rep-seeds');
 
 const sequelize = require('../config/connection');
 
@@ -20,6 +21,9 @@ const seedAll = async () => {
 
     await seedPayhist();
     console.log('\n---- PAY HIST SEEDED ----\n');
+
+    await seedRep();
+    console.log('\n---- REP SEEDED ----\n')
 
     process.exit(0);
 };

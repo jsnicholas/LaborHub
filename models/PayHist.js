@@ -31,15 +31,6 @@ PayHist.init(
       type: DataTypes.BOOLEAN,
       allowNull: false
     }
-    // due: {
-    //   type: DataTypes.DATEONLY,
-    //   allowNull: true,
-    //   defaultValue: DataTypes.NOW,
-    //   references: {
-    //     model: 'dates',
-    //     key: 'due_date'
-    //   }
-    // },
   },
   {
     sequelize,

@@ -1,48 +1,42 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Demographics extends Model { }
+class Rep extends Model { }
 
-Demographics.init(
+Rep.init(
   {
-    gender: {
-      type: DataTypes.STRING,
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
       allowNull: false,
-
+      primaryKey: true
     },
-    start_date: {
-      type: DataTypes.DATEONLY,
-      allowNull: false,
-    },
-    position: {
+    first_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    title: {
+    last_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    ethnicity: {
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true
+    },
+    phone: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    hourly_rate: {
-      type: DataTypes.DECIMAL,
-      allowNull: false,
-    },
-    salary: {
-      type: DataTypes.DECIMAL,
-      allowNull: false,
-    },
-
+   
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'demographics',
+    modelName: 'rep',
   }
 );
 
-module.exports = Demographics;
+module.exports = Rep;
