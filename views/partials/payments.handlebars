@@ -3,10 +3,10 @@
   <div class="card paycard col-6">
     <div class="card-header">
       <div class="card-title text-center h5">Make a Payment</div>
-      {{!-- <div class="card-subtitle">Total ${{Dates.amount}} due by {{Dates.due_date}}</div> --}}
     </div>
+    <div class="divider"></div>
     <div class="card-body text-center">
-      <p>Pay with PayPal</p>
+      <p class="text-center">Total ${{Dates.amount}} due by {{Dates.due_date}}. Click below to pay your union dues with PayPal.</p>
       <form action="/pay" method="post">
         <input type="submit" value="Pay Now" class="btn paybtn">
       </form>
@@ -27,7 +27,7 @@
         </thead>
         <tbody>
           <tr class="active">
-            {{!-- {{#if PayHist.paid === true}}
+            {{#if PayHist.paid === true}}
             {{#each PayHist}}
             <td>{{due_date}}</td>
             <td class="paiddues">Paid.</td>
@@ -37,7 +37,7 @@
             <td class="missedpayment">{{due_date}}</td>
             <td class="missedpayment">Missed payment. Please contact your representative.</td>
             {{/each}}
-            {{/if}} --}}
+            {{/if}}
           </tr>
         </tbody>
       </table>
