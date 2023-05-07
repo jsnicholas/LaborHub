@@ -1,8 +1,8 @@
-<div class="form-group">
-    <h2>Register below:</h2>
+<div class="form-group add-margin">
+    <h2 class="text-center">Register below:</h2>
     <form action="/register" method="POST">
 
-        <!--USERNAME AND PASSWORD-->
+        <!--LOGIN EMAIL AND PASSWORD-->
         <div class="card registercard"> <!--CARD START-->
             <div class="card-header"> <!--CARD HEADER START-->
                 <div class="card-title h5">Create Username and Password</div>
@@ -14,17 +14,19 @@
                 </label> <!--ACCORDION ARROW END-->
                 <div class="accordion-body"> <!--ACCORDION BODY START-->
                     <div class="card-body"> <!--CARD BODY START-->
-                        <!--usr_name-->
+                        <!--usr_name
                         <label class="form-label form-inline" for="usr_name">Username:</label>
-                        <input class="form-input form-inline" type="text" id="usr_name" name="usr_name" />
+                        <input class="form-input form-inline" type="text" id="usr_name" name="usr_name" />-->
                         <!--email-->
                         <label class="form-label form-inline" for="email">Login Email for Your Account:</label>
                         <input class="form-input" type="email" id="email" name="email"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,14}$" />
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
                         <!--password-->
                         <label class="form-label form-inline" for="password">Password:</label>
+                        <p class="exampletext text-small">Please have at least one uppercase letter, lowercase letter
+                            and number.</p>
                         <input class="form-input" type="password" id="password" name="password"
-                            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" />
+                            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$" required />
                     </div> <!--CARD BODY END-->
                 </div> <!--ACCORDION BODY END-->
             </div> <!--ACCORDION END-->
@@ -44,37 +46,42 @@
                     <div class="card-body"> <!--CARD BODY START-->
                         <!--first_name-->
                         <label class="form-label form-inline" for="first_name">First Name:</label>
-                        <input class="form-input" type="text" id="first_name" name="first_name" />
+                        <input class="form-input" type="text" id="first_name" name="first_name" required />
                         <!--last_name-->
                         <label class="form-label form-inline" for="last_name">Last Name:</label>
-                        <input class="form-input" type="text" id="last_name" name="last_name" />
-                         <!--email-->
+                        <input class="form-input" type="text" id="last_name" name="last_name" required />
+                        <!--email-->
                         <label class="form-label form-inline" for="email">Preferred Contact Email:</label>
-                        <input class="form-input" type="email" id="preferred-email" name="preferred-email" placeholder="Can be the Same or Different Email from Your Login Email"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,14}$" />
+                        <p class="exampletext text-small">Can be the same or different email used for you login email.
+                        </p>
+                        <input class="form-input" type="email" id="preferred-email" name="preferred-email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,14}$" required />
                         <!--personal phone-->
-                        <label class="form-label form-inline" for="personal_phone">Personal Phone Number:</label>
-                        <input class="form-input" type="number" id="personal_phone" name="personal_phone" />
-                        <!--address 1--> <!--address 2-->
-                        <label class="form-label form-inline" for="address1">Home Address:</label>
+
+                        <label class="form-label form-inline" for="personal_phone">Preferred Contact Phone
+                            Number:</label>
+                        <input class="form-input" type="tel" id="personal_phone" name="personal_phone" required />
+                        <!--address 1 allow null--> <!--address 2 allow null-->
+                        <label class="form-label form-inline" for="address1">Home Address (Not Required):</label>
+
                         <input class="form-input" type="text" id="address1" name="address1"
                             placeholder="123 Main St...">
                         <input class="form-input" type="text" id="address2" name="address2"
                             placeholder="Apt/Bldg/Unit Number...">
-                        <!--city-->
-                        <label class="form-label form-inline" for="city">City:</label>
+                        <!--city allow null-->
+                        <label class="form-label form-inline" for="city">City (Not Required):</label>
                         <input class="form-input" type="text" id="city" name="city" placeholder="Atlanta">
-                        <!--state-->
+                        <!--state allow null-->
                         <label class="form-label form-inline" for="state">Select U.S. State or Territory from the
-                            List:</label>
+                            List (Not Required):</label>
                         <select class="form-select" id="state" name="state">
                             <option>Choose an option</option>
                             {{#each statesArr as | state |}}
                             <option>{{state}}</option>
                             {{/each}}
                         </select>
-                        <!--zip-->
-                        <label class="form-label form-inline" for="zip">Zip Code:</label>
+                        <!--zip allow null-->
+                        <label class="form-label form-inline" for="zip">Zip Code (Not Required):</label>
                         <input class="form-input" type="text" id="zip" name="zip" />
                     </div> <!--CARD BODY END-->
                 </div> <!--ACCORDION BODY END-->
@@ -93,102 +100,103 @@
                 </label> <!--ACCORDION ARROW END-->
                 <div class="accordion-body"> <!--ACCORDION BODY START-->
                     <div class="card-body"> <!--CARD BODY START-->
-                        <!--sex-->
-                        <p class="exampletext">Gender Identity:</p>
+                        <!--sex allow null-->
+                        <p class="labeltext">Gender Identity (Not Required):</p>
                         <label class="form-radio">
-                            <input type="radio" id="sex" name="sex">
+                            <input type="radio" class="formcheckbox" name="sex">
                             <i class="form-icon"></i> Female
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sex" name="sex">
+                            <input type="radio" class="formcheckbox" name="sex">
                             <i class="form-icon"></i> Male
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sex" name="sex">
+                            <input type="radio" class="formcheckbox" name="sex">
                             <i class="form-icon"></i> Non-Binary
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sex" name="sex">
+                            <input type="radio" class="formcheckbox" name="sex">
                             <i class="form-icon"></i> Transgender-Female
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sex" name="sex">
+                            <input type="radio" class="formcheckbox" name="sex">
                             <i class="form-icon"></i> Transgender-Male
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sex" name="sex">
+                            <input type="radio" class="formcheckbox" name="sex">
                             <i class="form-icon"></i> Transgender-Non-Binary
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sex" name="sex">
+                            <input type="radio" class="formcheckbox" name="sex">
                             <i class="form-icon"></i> Other
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sex" name="sex">
+                            <input type="radio" class="formcheckbox" name="sex">
                             <i class="form-icon"></i> Prefer to Not Identify
                         </label>
-                        <!--sexual_orientation-->
-                        <p class="exampletext">Sexual Orientation:</p>
+                        <!--sexual_orientation allow null-->
+                        <p class="labeltext">Sexual Orientation (Not Required):</p>
                         <label class="form-radio">
-                            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+                            <input type="radio" class="formcheckbox" name="sexual_orientation">
                             <i class="form-icon"></i> Asexual
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+                            <input type="radio" class="formcheckbox" name="sexual_orientation">
                             <i class="form-icon"></i> Bisexual
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+                            <input type="radio" class="formcheckbox" name="sexual_orientation">
                             <i class="form-icon"></i> Gay
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+                            <input type="radio" class="formcheckbox" name="sexual_orientation">
                             <i class="form-icon"></i> Heterosexual
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+                            <input type="radio" class="formcheckbox" name="sexual_orientation">
                             <i class="form-icon"></i> Lesbian
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+                            <input type="radio" class="formcheckbox" name="sexual_orientation">
                             <i class="form-icon"></i> Pansexual
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+                            <input type="radio" class="formcheckbox" name="sexual_orientation">
                             <i class="form-icon"></i> Other
                         </label>
                         <label class="form-radio">
-                            <input type="radio" id="sexual_orientation" name="sexual_orientation">
+                            <input type="radio" class="formcheckbox" name="sexual_orientation">
                             <i class="form-icon"></i> Prefer to Not Identify
                         </label>
                         <!--ethnicity-->
-                        <p class="exampletext">Ethnicity (Please select all that apply):</p>
+                        <p class="labeltext">Ethnicity (Please select all that apply, or at least one from the list.):
+                        </p>
                         <label class="form-checkbox">
-                            <input type="checkbox" id="ethnicity" name="ethnicity">
+                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
                             <i class="form-icon"></i> American Indian and Alaska Native
                         </label>
                         <label class="form-checkbox">
-                            <input type="checkbox" id="ethnicity" name="ethnicity">
+                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
                             <i class="form-icon"></i> Asian
                         </label>
                         <label class="form-checkbox">
-                            <input type="checkbox" id="ethnicity" name="ethnicity">
+                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
                             <i class="form-icon"></i> Black or African American
                         </label>
                         <label class="form-checkbox">
-                            <input type="checkbox" id="ethnicity" name="ethnicity">
+                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
                             <i class="form-icon"></i> Hispanic
                         </label>
                         <label class="form-checkbox">
-                            <input type="checkbox" id="ethnicity" name="ethnicity">
+                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
                             <i class="form-icon"></i> Native Hawaiian and Other Pacific Islander
                         </label>
                         <label class="form-checkbox">
-                            <input type="checkbox" id="ethnicity" name="ethnicity">
+                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
                             <i class="form-icon"></i> White or Caucasian
                         </label>
                         <label class="form-checkbox">
-                            <input type="checkbox" id="ethnicity" name="ethnicity">
+                            <input type="checkbox" class="formcheckbox" name="ethnicity" onclick="ifCheckedVal()">
                             <i class="form-icon"></i> Some Other Race
                         </label>
                     </div> <!--CARD BODY END-->
@@ -210,29 +218,32 @@
                     <div class="card-body"> <!--CARD BODY START-->
                         <!--hire date-->
                         <label class="form-label form-inline" for="hire_date">Date of Hire:</label>
-                        <input class="form-input" type="date" id="hire_date" name="hire_date" />
+                        <input class="form-input" type="date" id="hire_date" name="hire_date" required />
                         <!--position-->
                         <label class="form-label form-inline" for="position">Position:</label>
-                        <input class="form-input" type="text" id="position" name="position" />
+                        <input class="form-input" type="text" id="position" name="position" required />
                         <!--title-->
                         <label class="form-label form-inline" for="title">Title:</label>
-                        <input class="form-input" type="text" id="title" name="title" />
-                        <!--work phone-->
-                        <label class="form-label form-inline" for="work_phone">Work Phone Number:</label>
-                        <input class="form-input" type="number" id="work_phone" name="work_phone" />
-                        <!--work phone ext-->
+
+                        <input class="form-input" type="text" id="title" name="title" required />
+                        <!--work phone allow null-->
+                        <label class="form-label form-inline" for="work_phone">Work Phone Number (Not Required):</label>
+                        <input class="form-input" type="tel" id="work_phone" name="work_phone" />
+                        <!--work phone ext allow null-->
+
+
                         <label class="form-label form-inline" for="work_phoneext">Work Phone
-                            Extension:</label>
+                            Extension (Not Required):</label>
                         <input class="form-input" type="number" id="work_phoneext" name="work_phoneext"
                             placeholder="0000" />
                         <!--base rate-->
                         <label class="form-label form-inline" for="base_rate">Base Rate: </label>
-                        <p class="exampletext">Example: Write "23" instead of "$23/hour"</p>
-                        <input class="form-input" type="number" id="base_rate" name="base_rate" />
+                        <p class="exampletext text-small">Example: Write "23" instead of "$23/hour"</p>
+                        <input class="form-input" type="number" id="base_rate" name="base_rate" required />
                         <!--annual salary-->
                         <label class="form-label form-inline" for="annual_salary">Annual Salary: </label>
-                        <p class="exampletext">Example: Write "40000" instead of "$40,000/year"</p>
-                        <input class="form-input" type="number" id="annual_salary" name="annual_salary" />
+                        <p class="exampletext text-small">Example: Write "40000" instead of "$40,000/year"</p>
+                        <input class="form-input" type="number" id="annual_salary" name="annual_salary" required />
                     </div> <!--CARD BODY END-->
                 </div> <!--ACCORDION BODY END-->
             </div> <!--ACCORDION END-->
@@ -240,9 +251,9 @@
 
         <!--SUBMIT BUTTON-->
         <a href="/login">
-            <button class="submit btn">Submit Registration</button>
+            <button class="submit btn" type="submit">Submit Registration</button>
         </a>
-
+    </form>
 </div>
-</form>
-</div>
+<!--LINK checkbox.js-->
+<script src="/js/checkbox.js"></script>

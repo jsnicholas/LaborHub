@@ -2,7 +2,9 @@ const { PayHist } = require('../models');
 
 const payhistData = [
     {
-        paid: 0
+        employee_id: 1,
+        paid: 0,
+        date_id: 1,
     }
 ];
 

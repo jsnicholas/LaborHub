@@ -12,33 +12,34 @@ PayHist.init(
       unique: true
     },
     employee_id: {
-      type: DataTypes.UUID,
+      type: DataTypes.INTEGER,
       allowNull: true,
       references: {
         model: 'employee',
-        key: 'id',
+        key: 'user_id',
       },
     },
     date_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
         model: 'dates',
         key: 'id'
-      }
-    },
-    due_date: {
-      type: DataTypes.DATEONLY,
-      allowNull: false,
-      references: {
-        model: 'dates',
-        key: 'due_date'
       }
     },
     paid: {
       type: DataTypes.BOOLEAN,
       allowNull: false
     }
+    // due: {
+    //   type: DataTypes.DATEONLY,
+    //   allowNull: true,
+    //   defaultValue: DataTypes.NOW,
+    //   references: {
+    //     model: 'dates',
+    //     key: 'due_date'
+    //   }
+    // },
   },
   {
     sequelize,
