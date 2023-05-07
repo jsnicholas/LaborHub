@@ -1,5 +1,6 @@
 const router = require('express').Router();
-
+const { User, Employee } = require('../models');
+const bcrypt = require('bcrypt');
 
 router.get('/', (req, res) => {
     console.log(req.session.loggedIn)
@@ -15,14 +16,22 @@ router.get('/', (req, res) => {
                 email: req.body.email
             }
         });
+        console.log("I found this")
+        console.log(userFromDb);
         try {
             // we need to implement bcrypt compare
-            if (bcrypt.compare(req.body.password, userFromDb.password)) {
+            console.log(`The user typed in this pass: ${req.body.password}`);
+            console.log(`Does it match?`);
+            console.log(await bcrypt.compare(req.body.password, userFromDb.password))
+            // compare entered pw to hashed pw from user db
+            if (await bcrypt.compare(req.body.password, userFromDb.password)) {
+                // if pw matches, get info from employee db
                 const employeeFromDb = await Employee.findOne({
                     where: {
-                        user_id: userFromDb.id
+                        id: userFromDb.id
                     }
-                }).then((result) => { return result })
+                    // then set up their session and dashboard
+                }).then((result) => { console.log(result); return result })
                 req.session.loggedIn = true;
                 res.render('dashboard', { first_name: employeeFromDb.first_name, last_name: employeeFromDb.last_name, loggedIn: req.session.loggedIn })
                 // return;

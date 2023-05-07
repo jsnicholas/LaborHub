@@ -5,12 +5,14 @@ class Employee extends Model { }
 
 Employee.init(
   {
-    id: {
-      type: DataTypes.UUID,
-      primaryKey: true,
-      defaultValue: DataTypes.UUIDV4,
-      unique: true
-    },
+    // this will create a UUID
+    // But is not necessary at the moment
+    // id: {
+    //   type: DataTypes.UUID,
+    //   primaryKey: true,
+    //   defaultValue: DataTypes.UUIDV4,
+    //   unique: true
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
