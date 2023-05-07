@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
     try { 
         // checks to see if tina seed is being used, and doesn't try to unsalt/unhash password if so. 
         if (req.body.email = tina) {
-            if (req.body.password == 'password') {
+            if (req.body.password == 'Password1') {
                 const employeeFromDb = await Employee.findOne({
                     where: {
                         id: userFromDb.id
