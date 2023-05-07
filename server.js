@@ -12,15 +12,14 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const hbs = exphbs.create({ 
+const hbs = exphbs.create({
   helpers: {
-    eachState: function () { 
+    eachState: function () {
       const statesArr = Object.keys(statesUS)
       return statesArr;
     }
   }
 })
-
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -42,6 +41,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync(
+  // forcing a sync will delete all existing tables!
+  // please be aware of this when setting force:true
+  // { force: true }
+).then(() => {
   app.listen(PORT, () => console.log(`Now listening at http://localhost:${PORT}`));
 });
