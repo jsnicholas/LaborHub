@@ -6,7 +6,7 @@ const repData = [
         first_name: 'Laboor',
         last_name: 'Hubble',
         email: 'laboor@gmail.com',
-        phone: 5555555555
+        phone: '5555555555'
     }
 ];
 
