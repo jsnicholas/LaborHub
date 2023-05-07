@@ -1,23 +1,16 @@
-<!--UPCOMING-->
-<div class="card upcoming">
+<!--MAKE A PAYMENT-->
+<div class="card makepayment">
   <div class="card-header">
     <div class="card-title h5">Upcoming Payments</div>
     <div class="card-subtitle">Total ${{Dates.amount}} due by {{Dates.due_date}}</div>
   </div>
   <div class="card-body">
-    Content Body
-  </div>
-</div>
-<!--Make a Payment-->
-<div class="card makepayment">
-  <div class="card-header">
-    <div class="card-title h5">Make a Payment</div>
-    <div class="card-subtitle">Total ${{Dates.amount}} due by {{Dates.due_date}}</div>
-  </div>
-  <div class="card-body">
-    ...
+    <p>Make a payment:</p>
   </div>
   <div class="card-footer">
+
+    <button class="btn btn-success"><i class="fa-regular fa-money-bill" style="color: #EBEBEBff;"></i>Pay Now</button>
+
     <button class="btn btn-primary"><i class="fa-regular fa-money-bill" style="color: #EBEBEBff;"></i>Pay Now</button>
     <script data-sdk-integration-source="integrationbuilder_ac"></script>
     <div id="paypal-button-container"></div>
@@ -78,21 +71,40 @@
        })
 
     </script>
+
   </div>
 </div>
-<!--Payment History-->
+<!--PAYMENT HISTORY-->
 <div class="card payhistory">
   <div class="card-header">
-    <div class="card-title h5">Your Payment History</div>
+    <div class="card-title text-center h5">Your Payment History</div>
   </div>
   <div class="card-body">
-    
-    <ul>
-        <!--{{#each through PayHist date_id, due_date, paid}}-->
-        <li>
+    <table class="table payhisttable">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Dues Paid</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="active">
+          {{#if PayHist.paid === true}}
+            {{#each PayHist}}
+            <td>{{due_date}}</td>
+            <td class="paiddues">Paid.</td>
+            {{/each}}
+          {{else}}
+            {{#each PayHist}}
+            <td  class="missedpayment">{{due_date}}</td>
+            <td class="missedpayment">Missed payment. Please contact your representative.</td>
+            {{/each}}
+          {{/if}}
+        </tr>
+      </tbody>
+    </table>
 
-        </li>
-        <!--{{/each}}-->
+
     </ul>
   </div>
 </div>
