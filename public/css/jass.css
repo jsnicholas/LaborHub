@@ -70,6 +70,7 @@ background-color: var(--green);
 
 td.missedpayment {
   background-color: var(--rust);
+  font-weight: bold;
 }
 
 /* LOGIN CARD */
