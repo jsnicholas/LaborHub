@@ -26,6 +26,22 @@ router.post("/", async (req, res) => {
                         first_name: req.body.first_name,
                         last_name: req.body.last_name,
                         email: req.body.email,
+                        personal_phone: req.body.personal_phone,
+                        address1: req.body.address1,
+                        address2: req.body.address2,
+                        city: req.body.city,
+                        state: req.body.state,
+                        zip: req.body.zip,
+                        sex: req.body.sex,
+                        sexual_orientation: req.body.sexual_orientation,
+                        hire_date: req.body.hire_date,
+                        position: req.body.position,
+                        title: req.body.title,
+                        ethnicity: req.body.ethnicity,
+                        work_phone: req.body.work_phone,
+                        work_phoneext: req.body.work_phoneext,
+                        base_rate: req.body.base_rate,
+                        annual_salary: req.body.annual_salary,
                     })
                 })
                 res.render("login", { message: "Successfully registered. Please log in." });
