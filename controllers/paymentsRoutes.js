@@ -22,8 +22,9 @@ router.post("/", (req, res) => {
             payment_method: "paypal",
         },
         redirect_urls: {
-            return_url: "http://127.0.0.1:3001/pay/success",
-            cancel_url: "http://127.0.0.1:3001/pay/failure",
+            // where to send the user after they pay or cancel payment process
+            return_url: "https://laborhub.herokuapp.com/pay/success",
+            cancel_url: "https://laborhub.herokuapp.com/pay/failure",
         },
         transactions: [
             {
