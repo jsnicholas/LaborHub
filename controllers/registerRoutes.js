@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
             }
         }).then(async (result) => {
             if (result !== null) {
-                res.render("register", { error: "User already exists. Please try registering with a new username or email" })
+                res.render("register", { error: "User already exists. Please try registering with a new username or email", title: "Register - LaborHub" })
             } else {
                 const salt = await bcrypt.genSalt(10)
                 await bcrypt.hash(req.body.password, salt).then(function (hash) {
@@ -44,7 +44,7 @@ router.post("/", async (req, res) => {
                         annual_salary: req.body.annual_salary,
                     })
                 })
-                res.render("login", { message: "Successfully registered. Please log in." });
+                res.render("login", { message: "Successfully registered. Please log in.", title: "Login - Laborhub" });
             }
         })
     } catch (err) {
@@ -57,11 +57,11 @@ router.post("/", async (req, res) => {
 router.get('/', (req, res) => {
     const statesArr = Object.keys(statesUS)
     if (req.session.logged_in) {
-        res.redirect('/');
+        res.render('dashboard', { title: "Dashboard - LaborHub" });
         return;
     }
 
-    res.render('register', { statesArr });
+    res.render('register', { statesArr, title: "Register - LaborHub" });
 });
 
 module.exports = router;
