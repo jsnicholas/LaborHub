@@ -31,22 +31,29 @@
         <a href="/" class="text-light">HOME</a></span>
       <span><img
           src="./icons/dashboard.svg"
-          alt="home icon"
+          alt="dashboard icon"
           height="20"
           width="20"
         /><a href="/dashboard" class="text-light">DASHBOARD</a></span>
-      <span><a href="/pay" class="text-light">PAY DUES</a></span>
+      <span>
+        <img
+          src="./icons/dollar-sign-solid.svg"
+          alt="payment icon"
+          height="20"
+          width="20"
+        />
+        <a href="/pay" class="text-light">PAY DUES</a></span>
       {{#if loggedIn}}
         <span><img
             src="./icons/logout.svg"
-            alt="home icon"
+            alt="logout icon"
             height="20"
             width="20"
           /><a href="/logout" class="text-light">LOGOUT</a></span>
       {{else}}
         <span><img
             src="./icons/logout.svg"
-            alt="home icon"
+            alt="login icon"
             height="20"
             width="20"
           /><a href="/login" class="text-light">LOGIN</a></span>
