@@ -4,7 +4,7 @@ const paypal = require('paypal-rest-sdk');
 
 // render the payments page
 router.get('/', (req, res) => {
-    res.render('payments');
+    res.render('payments', {PayHist: true, due_date: "April 15, 2023"});
 })
 // if the payment successfully went through, render success page
 router.get('/success', (req, res) => {
