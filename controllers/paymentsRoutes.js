@@ -4,15 +4,15 @@ const paypal = require('paypal-rest-sdk');
 
 // render the payments page
 router.get('/', (req, res) => {
-    res.render('payments', {PayHist: true, due_date: "April 15, 2023"});
+    res.render('payments', { PayHist: true, due_date: "April 15, 2023", title: "Payments - LaborHub" });
 })
 // if the payment successfully went through, render success page
 router.get('/success', (req, res) => {
-    res.render('payments', { message: "Payment Successful." })
+    res.render('payments', { message: "Payment Successful.", title: "Payment Successful" })
 })
 // if the payment failed, render failure
 router.get('/failure', (req, res) => {
-    res.render('payments', { error: "Payment Failed." })
+    res.render('payments', { error: "Payment Failed.", title: "Payment Failed" })
 })
 // make a post request with union dues data to paypal
 router.post("/", (req, res) => {
