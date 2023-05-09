@@ -3,9 +3,6 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class User extends Model {
-  // checkPassword(loginPw) {
-  //   return bcrypt.compare(loginPw, this.password);
-  // }
 }
 
 User.init(
@@ -37,14 +34,6 @@ User.init(
     },
   },
   {
-    // running this hook will cause the password to be hashed an additional time
-    // we don't want to do that
-    // hooks: {
-    //   beforeCreate: async (newUserData) => {
-    //     newUserData.password = await bcrypt.hash(newUserData.password, 10);
-    //     return newUserData;
-    //   },
-    // },
     sequelize,
     timestamps: false,
     freezeTableName: true,

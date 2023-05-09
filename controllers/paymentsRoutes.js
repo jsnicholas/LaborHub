@@ -1,18 +1,31 @@
 const router = require('express').Router();
-const { User, Employee, PayHist } = require('../models');
+// We aren't using the models here, but they will be implemented in a future release
+// const { User, Employee, PayHist } = require('../models');
 const paypal = require('paypal-rest-sdk');
 
 // render the payments page
 router.get('/', (req, res) => {
-    res.render('payments', { PayHist: true, due_date: "April 15, 2023", amount: "25.00", due_date: "May 15, 2023",title: "Payments - LaborHub" });
+    if (req.session.loggedIn) {
+        res.render('payments', { PayHist: true, due_date: "April 15, 2023", amount: "25.00", due_date: "May 15, 2023", title: "Payments - LaborHub" })
+    }
+    else { res.render('login', { error: "Please log in to pay dues." }) };
 })
 // if the payment successfully went through, render success page
 router.get('/success', (req, res) => {
-    res.render('payments', { message: "Payment Successful.", title: "Payment Successful" })
+    if (req.session.loggedIn) {
+        res.render('payments', { message: "Payment Successful.", title: "Payment Successful" })
+    }
+    else {
+        res.render('login', { error: "Please log in to pay dues." })
+    }
 })
 // if the payment failed, render failure
 router.get('/failure', (req, res) => {
-    res.render('payments', { error: "Payment Failed.", title: "Payment Failed" })
+    if (req.session.loggedIn) {
+        res.render('payments', { error: "Payment Failed.", title: "Payment Failed" })
+    } else {
+        res.render('login', { error: "Please log in to pay dues." })
+    }
 })
 // make a post request with union dues data to paypal
 router.post("/", (req, res) => {
