@@ -23,7 +23,7 @@ const hbs = exphbs.create({
   }
 })
 const sess = {
-  secret: 'Super secret secret',
+  secret: process.env.sessionSecret,
   cookie: {},
   resave: false,
   saveUninitialized: true,

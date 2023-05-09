@@ -2,7 +2,17 @@
 
 ## Description
 
-LaborHub is an app that allows users to share their wages, demographics data, and check if dues are paid.
+LaborHub is a member management system for local unions. It allows members to check the due date for union dues, see organizational demographics, and contact their union representative. It can also be used by employees who wish to discreetly share and compare salaries and demographics.
+
+This app uses the following technologies:
+
+**Node.js** and **Express.js** for creating a RESTful API.
+
+**Handlebars.js** for keeping the HTML simple and dynamic.
+
+**MySQL** and **Sequelize** for interacting with and updating the database.
+
+**PayPal** npm package for payment processing.
 
 ## Table of Contents
 - [Links](#links)
@@ -15,7 +25,7 @@ LaborHub is an app that allows users to share their wages, demographics data, an
 
 ## Links
 
-[Deployed Site](https://laborhub.herokuapp.com/login)
+[Deployed Site](https://laborhub.herokuapp.com/)
 
 [GitHub Repository](https://github.com/jsnicholas/LaborHub)
 
@@ -25,13 +35,21 @@ View the repository's wiki page for information on how to navigate the site...
 
 ## Collaborators
 
-Tina Croxton - [GitHub Profile](https://github.com/TinaTheDev91)
+**Tina Croxton**
+*Database Administrator*
+[GitHub Profile](https://github.com/TinaTheDev91)
 
-Victoria McNorrill - [Github Profile](https://github.com/victoriamcn)
+**Victoria McNorrill**
+*Front-End Developer*
+[Github Profile](https://github.com/victoriamcn)
 
-John Kersey - [Github Profile](https://github.com/JohnKersey2)
+**John Kersey**
+*Router*
+[Github Profile](https://github.com/JohnKersey2)
 
-Nick Johnson - [Github Profile](https://github.com/jsnicholas)
+**Nick Johnson**
+*Project Manager / Debug Support*
+[Github Profile](https://github.com/jsnicholas)
 
 ## Preview
 
