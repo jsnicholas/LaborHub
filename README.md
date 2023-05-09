@@ -31,29 +31,34 @@ This app uses the following technologies:
 
 ## Documentation
 
-View the repository's wiki page for information on how to navigate the site...
+View the repository's wiki page for information on how to navigate the site  
+[Wiki-Page](https://github.com/jsnicholas/LaborHub/wiki)
 
 ## Collaborators
 
-**Tina Croxton**
-*Database Administrator*
+**Tina Croxton**  
+*Database Administrator*  
 [GitHub Profile](https://github.com/TinaTheDev91)
 
-**Victoria McNorrill**
-*Front-End Developer*
+**Victoria McNorrill**  
+*Front-End Developer*  
 [Github Profile](https://github.com/victoriamcn)
 
-**John Kersey**
-*Router*
+**John Kersey**  
+*Router*  
 [Github Profile](https://github.com/JohnKersey2)
 
-**Nick Johnson**
-*Project Manager / Debug Support*
+**Nick Johnson**  
+*Project Manager / Debug Support*  
 [Github Profile](https://github.com/jsnicholas)
 
 ## Preview
 
-<img src="./assets/screenshots/mobile-dashboard.png" width="400px"/>
+![mobile-dashboard](./assets/screenshots/mobile-dashboard.png)
+
+![desktop-landing-page](./assets/screenshots/desktop-landing-page.jpg)
+
+![desktop-dashboard](./assets/screenshots/desktop-dashboard.jpg)
 
 ## License
 
